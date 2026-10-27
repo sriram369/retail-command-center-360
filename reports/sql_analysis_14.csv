@@ -1,0 +1,3 @@
+ExceptionType,Priority,AffectedOrders,OrderedValueExposure,OldestAgeDays
+Missing webhook,High priority,4,457.61,3
+SKU mapping,High priority,24,3675.05,11

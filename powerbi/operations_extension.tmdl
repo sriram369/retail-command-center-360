@@ -1,0 +1,162 @@
+createOrReplace
+
+	ref table _Measures
+		measure 'Eligible Orders' = SUM(ReportFulfillment1[EligibleOrders])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Fulfilled Orders' = SUM(ReportFulfillment1[FulfilledOrders])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Fulfillment Rate' = DIVIDE([Fulfilled Orders], [Eligible Orders])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Late Orders' = SUM(ReportFulfillment1[LateOrders])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Open Late Orders' = SUM(ReportFulfillment1[OpenLateOrders])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Average Fulfillment Duration' = DIVIDE(SUM(ReportFulfillment1[FulfillmentDays]), [Fulfilled Orders])
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Low Stock SKU Location Count' = SUM(ReportInventory[LowStock])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'SLA Compliance Rate' = DIVIDE(SUM(ReportTickets4[SLAMet]), SUM(ReportTickets4[SLAEligible]))
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Mean Time to Resolution' = DIVIDE(SUM(ReportTickets4[ResolutionHours]), SUM(ReportTickets4[ResolvedCount]))
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Open Support Tickets' = SUM(ReportTickets4[OpenCount])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Repeat Incidents' = SUM(ReportTickets4[RepeatIncident])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Ticket Count' = COUNTROWS(ReportTickets4)
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'High-Priority Exceptions' = CALCULATE(COUNTROWS(ReportReconciliation6), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation", ReportReconciliation6[Cohort] = 1)
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Average Inventory Value 90D' = VAR EndDate = MAX(DimDate7[Date]) VAR DataStartDate = CALCULATE(MIN(DimDate7[Date]), REMOVEFILTERS(DimDate7)) RETURN IF(EndDate - 89 >= DataStartDate && NOT ISFILTERED(DimProduct10) && NOT ISFILTERED(DimLocation9) && NOT ISFILTERED(DimChannel8), CALCULATE(AVERAGE(ReportDailyInventory3[InventoryValue]), REMOVEFILTERS(DimDate7), DATESBETWEEN(DimDate7[Date], EndDate - 89, EndDate)))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'COGS 90D' = VAR EndDate = MAX(DimDate7[Date]) RETURN CALCULATE(SUM(ReportDailyFinance2[COGS]), REMOVEFILTERS(DimDate7), DATESBETWEEN(DimDate7[Date], EndDate - 89, EndDate))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Inventory Turnover 90D Annualized' = DIVIDE([COGS 90D], [Average Inventory Value 90D]) * 365 / 90
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Days of Inventory on Hand' = DIVIDE([Average Inventory Value 90D], [COGS 90D]) * 90
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Product Net Sales' = SUM(ReportProduct5[NetSales])
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Product Gross Profit' = SUM(ReportProduct5[GrossProfit])
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Product Gross Margin %' = DIVIDE([Product Gross Profit], [Product Net Sales])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Net Sales' = SUM(ReportFinance[NetSales])
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'COGS' = SUM(ReportFinance[COGS])
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Gross Profit' = [Net Sales] - [COGS]
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Sales Budget' = SUM(ReportFinance[SalesBudget])
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Budget Variance' = [Net Sales] - [Sales Budget]
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Previous Period Sales' = CALCULATE([Net Sales], DATEADD(DimDate7[Date], -1, MONTH))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Average Order Value' = DIVIDE([Net Sales], SUM(ReportFinance[FulfilledOrders]))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Current Inventory Value' = SUM(ReportInventory[InventoryValue])
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Net Sales Q3 2026' = CALCULATE([Net Sales], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2026,7,1), ReportFinance[MonthStart] <= DATE(2026,9,1))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Gross Profit Q3 2026' = CALCULATE([Gross Profit], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2026,7,1), ReportFinance[MonthStart] <= DATE(2026,9,1))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Net Sales Q3 2025' = CALCULATE([Net Sales], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2025,7,1), ReportFinance[MonthStart] <= DATE(2025,9,1))
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+		measure 'Order Value Awaiting Reconciliation' = CALCULATE(SUM(ReportReconciliation6[OrderedAmount]), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation")
+			formatString: "$"#,##0.00
+			displayFolder: Retail360
+
+	relationship Retail360_10
+		fromColumn: ReportFulfillment1.MonthStart
+		toColumn: DimDate7.Date
+
+	relationship Retail360_11
+		fromColumn: ReportFulfillment1.ChannelId
+		toColumn: DimChannel8.ChannelId
+
+	relationship Retail360_12
+		fromColumn: ReportFulfillment1.LocationId
+		toColumn: DimLocation9.LocationId
+
+	relationship Retail360_13
+		fromColumn: ReportDailyFinance2.PostingDate
+		toColumn: DimDate7.Date
+
+	relationship Retail360_14
+		fromColumn: ReportDailyInventory3.BalanceDate
+		toColumn: DimDate7.Date
+
+	relationship Retail360_15
+		fromColumn: ReportTickets4.OpenDate
+		toColumn: DimDate7.Date
+
+	relationship Retail360_16
+		fromColumn: ReportProduct5.MonthStart
+		toColumn: DimDate7.Date
+
+	relationship Retail360_17
+		fromColumn: ReportProduct5.ProductId
+		toColumn: DimProduct10.ProductId

@@ -1,0 +1,12 @@
+test_budget_does_not_multiply (test_controls.Controls.test_budget_does_not_multiply) ... ok
+test_canceled_sale_is_detected (test_controls.Controls.test_canceled_sale_is_detected) ... ok
+test_duplicate_erp_business_key_is_detected (test_controls.Controls.test_duplicate_erp_business_key_is_detected) ... ok
+test_independent_sql_financial_control (test_controls.Controls.test_independent_sql_financial_control) ... ok
+test_invalid_reference_is_detected (test_controls.Controls.test_invalid_reference_is_detected) ... ok
+test_missing_events_are_not_lost (test_controls.Controls.test_missing_events_are_not_lost) ... ok
+test_sla_open_boundary_and_zero_denominator (test_controls.Controls.test_sla_open_boundary_and_zero_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.174s
+
+OK

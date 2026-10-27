@@ -1,0 +1,159 @@
+Table,Grain,Field,Type,Definition
+DimChannel,one sales channel,ChannelId,integer,Stable identifier for Channel.
+DimChannel,one sales channel,Channel,text,Channel.
+DimCustomer,one anonymous synthetic customer profile,CustomerId,integer,Stable identifier for Customer.
+DimCustomer,one anonymous synthetic customer profile,CustomerCode,text,Customer Code.
+DimCustomer,one anonymous synthetic customer profile,Segment,text,Segment.
+DimCustomer,one anonymous synthetic customer profile,State,text,State.
+DimCustomer,one anonymous synthetic customer profile,Synthetic,integer,Always 1. Profiles contain no names or contact information.
+DimDate,one calendar date,Date,ISO date,Date.
+DimDate,one calendar date,Year,integer,Year.
+DimDate,one calendar date,MonthNumber,integer,Month Number.
+DimDate,one calendar date,Month,text,Month.
+DimDate,one calendar date,MonthStart,text,Month Start.
+DimDate,one calendar date,Quarter,text,Quarter.
+DimDate,one calendar date,DayOfWeek,text,Day Of Week.
+DimLocation,one physical stocking location,LocationId,integer,Stable identifier for Location.
+DimLocation,one physical stocking location,LocationName,text,Location Name.
+DimLocation,one physical stocking location,LocationType,text,Location Type.
+DimLocation,one physical stocking location,State,text,State.
+DimProduct,one finished-goods SKU,ProductId,integer,Stable identifier for Product.
+DimProduct,one finished-goods SKU,SKU,text,S K U.
+DimProduct,one finished-goods SKU,ProductName,text,Product Name.
+DimProduct,one finished-goods SKU,Category,text,Category.
+DimProduct,one finished-goods SKU,SupplierId,integer,Stable identifier for Supplier.
+DimProduct,one finished-goods SKU,RetailPrice,decimal,Undiscounted retail list price in USD.
+DimProduct,one finished-goods SKU,OpeningUnitCost,decimal,"Opening inventory unit cost, not the current issue cost."
+DimProduct,one finished-goods SKU,Customizable,integer,Customizable.
+DimStore,one physical store,StoreId,integer,Stable identifier for Store.
+DimStore,one physical store,StoreName,text,Store Name.
+DimStore,one physical store,City,text,City.
+DimStore,one physical store,State,text,State.
+DimSupplier,one fictional supplier,SupplierId,integer,Stable identifier for Supplier.
+DimSupplier,one fictional supplier,SupplierName,text,Supplier Name.
+DimSupplier,one fictional supplier,StandardLeadDays,integer,Standard Lead Days.
+DimSupplier,one fictional supplier,Terms,text,Terms.
+FactBudget,one month / channel / location budget,BudgetId,integer,Stable identifier for Budget.
+FactBudget,one month / channel / location budget,MonthStart,text,Month Start.
+FactBudget,one month / channel / location budget,ChannelId,integer,Stable identifier for Channel.
+FactBudget,one month / channel / location budget,LocationId,integer,Stable identifier for Location.
+FactBudget,one month / channel / location budget,SalesBudget,decimal,Independent monthly net-sales target at channel/location grain.
+FactERPOrderLinks,one successfully created simulated ERP order,ERPLinkId,integer,Stable identifier for ERPLink.
+FactERPOrderLinks,one successfully created simulated ERP order,OrderId,integer,Stable identifier for Order.
+FactERPOrderLinks,one successfully created simulated ERP order,ERPOrderId,text,Stable identifier for ERPOrder.
+FactERPOrderLinks,one successfully created simulated ERP order,SyncedDate,ISO date,Synced Date.
+FactIntegrationEvents,one received mock integration event or retry,EventId,integer,Stable identifier for Event.
+FactIntegrationEvents,one received mock integration event or retry,OrderId,integer,Stable identifier for Order.
+FactIntegrationEvents,one received mock integration event or retry,EventDate,ISO date,Event Date.
+FactIntegrationEvents,one received mock integration event or retry,SourceSystem,text,Source System.
+FactIntegrationEvents,one received mock integration event or retry,EventType,text,Event Type.
+FactIntegrationEvents,one received mock integration event or retry,Status,text,Status.
+FactIntegrationEvents,one received mock integration event or retry,BusinessKey,text,Business Key.
+FactIntegrationEvents,one received mock integration event or retry,PayloadSKU,text,"Untrusted mock source payload; UNKNOWN-SKU represents a quarantined mapping error, not an invalid analytical FK."
+FactIntegrationEvents,one received mock integration event or retry,Deduplicated,integer,1 if a duplicate webhook is ignored without creating another sale.
+FactInventoryMovements,one signed stock/value movement,MovementId,integer,Stable identifier for Movement.
+FactInventoryMovements,one signed stock/value movement,MovementDate,ISO date,Movement Date.
+FactInventoryMovements,one signed stock/value movement,LocationId,integer,Stable identifier for Location.
+FactInventoryMovements,one signed stock/value movement,ProductId,integer,Stable identifier for Product.
+FactInventoryMovements,one signed stock/value movement,MovementType,text,Movement Type.
+FactInventoryMovements,one signed stock/value movement,QuantityChange,integer,Signed stock units; receipts positive and issues negative.
+FactInventoryMovements,one signed stock/value movement,ValueChange,decimal,Signed stock carrying-value change in USD to four decimals.
+FactInventoryMovements,one signed stock/value movement,ReferenceType,text,Reference Type.
+FactInventoryMovements,one signed stock/value movement,ReferenceId,text,Polymorphic movement reference; interpreted together with ReferenceType.
+FactInventoryMovements,one signed stock/value movement,TransferId,text,Shared reference between an equal and opposite transfer pair; blank on other movements.
+FactInventorySnapshots,one month-end / SKU / location balance,SnapshotId,integer,Stable identifier for Snapshot.
+FactInventorySnapshots,one month-end / SKU / location balance,SnapshotDate,ISO date,Snapshot Date.
+FactInventorySnapshots,one month-end / SKU / location balance,LocationId,integer,Stable identifier for Location.
+FactInventorySnapshots,one month-end / SKU / location balance,ProductId,integer,Stable identifier for Product.
+FactInventorySnapshots,one month-end / SKU / location balance,UnitsOnHand,integer,Units On Hand.
+FactInventorySnapshots,one month-end / SKU / location balance,InventoryValue,decimal,Closing carrying value in USD; not additive over snapshot dates.
+FactInventorySnapshots,one month-end / SKU / location balance,WeightedAverageCost,decimal,Closing value divided by on-hand units; zero when no units remain.
+FactPurchaseOrders,one single-SKU purchase order,PurchaseOrderId,integer,Stable identifier for PurchaseOrder.
+FactPurchaseOrders,one single-SKU purchase order,PONumber,text,P O Number.
+FactPurchaseOrders,one single-SKU purchase order,ProductId,integer,Stable identifier for Product.
+FactPurchaseOrders,one single-SKU purchase order,SupplierId,integer,Stable identifier for Supplier.
+FactPurchaseOrders,one single-SKU purchase order,LocationId,integer,Stable identifier for Location.
+FactPurchaseOrders,one single-SKU purchase order,PODate,ISO date,P O Date.
+FactPurchaseOrders,one single-SKU purchase order,ApprovalDate,ISO date,Approval Date.
+FactPurchaseOrders,one single-SKU purchase order,PromisedReceiptDate,ISO date,Approved PO promise date; may lie after the reporting cutoff.
+FactPurchaseOrders,one single-SKU purchase order,ReceivedDate,ISO date,Received Date.
+FactPurchaseOrders,one single-SKU purchase order,Quantity,integer,Quantity.
+FactPurchaseOrders,one single-SKU purchase order,UnitCost,decimal,Unit Cost.
+FactPurchaseOrders,one single-SKU purchase order,POAmount,decimal,P O Amount.
+FactPurchaseOrders,one single-SKU purchase order,ApprovalDays,integer,Simulated approval duration; future approval dates are not exposed as completed approvals.
+FactPurchaseOrders,one single-SKU purchase order,POStatus,text,P O Status.
+FactPurchaseOrders,one single-SKU purchase order,ScenarioAffected,integer,Scenario truth flag for intentionally delayed purchasing.
+FactReturns,one returned unit of an actual completed sales line,ReturnId,text,Stable identifier for Return.
+FactReturns,one returned unit of an actual completed sales line,OrderId,integer,Stable identifier for Order.
+FactReturns,one returned unit of an actual completed sales line,OrderLineId,integer,Stable identifier for OrderLine.
+FactReturns,one returned unit of an actual completed sales line,ReturnDate,ISO date,Return Date.
+FactReturns,one returned unit of an actual completed sales line,ProductId,integer,Stable identifier for Product.
+FactReturns,one returned unit of an actual completed sales line,LocationId,integer,Stable identifier for Location.
+FactReturns,one returned unit of an actual completed sales line,ChannelId,integer,Stable identifier for Channel.
+FactReturns,one returned unit of an actual completed sales line,CustomerId,integer,Stable identifier for Customer.
+FactReturns,one returned unit of an actual completed sales line,Quantity,integer,Quantity.
+FactReturns,one returned unit of an actual completed sales line,RefundAmount,decimal,Original discounted unit price rounded to cents using Python round; actual refund amount is authoritative.
+FactReturns,one returned unit of an actual completed sales line,CostReversal,decimal,Cost Reversal.
+FactReturns,one returned unit of an actual completed sales line,Reason,text,Reason.
+FactReturns,one returned unit of an actual completed sales line,Disposition,text,Disposition.
+FactSalesOrderLines,one product line per source order,OrderLineId,integer,Stable identifier for OrderLine.
+FactSalesOrderLines,one product line per source order,OrderId,integer,Stable identifier for Order.
+FactSalesOrderLines,one product line per source order,ProductId,integer,Stable identifier for Product.
+FactSalesOrderLines,one product line per source order,Quantity,integer,Quantity.
+FactSalesOrderLines,one product line per source order,UnitPrice,decimal,Unit Price.
+FactSalesOrderLines,one product line per source order,DiscountAmount,decimal,Line discount before returns; do not subtract again from NetAmount.
+FactSalesOrderLines,one product line per source order,OrderedAmount,decimal,Order-line amount after discount. Not booked sales until a sale transaction exists.
+FactSalesOrders,one source customer order,OrderId,integer,Stable identifier for Order.
+FactSalesOrders,one source customer order,OrderNumber,text,Order Number.
+FactSalesOrders,one source customer order,OrderDate,ISO date,Order Date.
+FactSalesOrders,one source customer order,CustomerId,integer,Stable identifier for Customer.
+FactSalesOrders,one source customer order,ChannelId,integer,Stable identifier for Channel.
+FactSalesOrders,one source customer order,LocationId,integer,Stable identifier for Location.
+FactSalesOrders,one source customer order,PromisedDate,ISO date,"Customer promised ship/fulfillment date, not promised delivery."
+FactSalesOrders,one source customer order,OrderStatus,text,Order Status.
+FactSalesOrders,one source customer order,PaymentStatus,text,"Captured or Voided. Captured is a source order state, not an accounting cash ledger."
+FactSalesOrders,one source customer order,IntegrationIssue,text,Integration Issue.
+FactSalesOrders,one source customer order,AvailableDate,ISO date,Earliest date the source order may be fulfilled after processing or synchronization.
+FactSalesOrders,one source customer order,Cohort,integer,Scenario truth flag for the targeted assortment. Hidden from business report; used for scenario verification.
+FactSalesTransactions,one signed sales-line or return posting,SalesTransactionId,integer,Stable identifier for SalesTransaction.
+FactSalesTransactions,one signed sales-line or return posting,PostingDate,ISO date,Posting Date.
+FactSalesTransactions,one signed sales-line or return posting,OrderId,integer,Stable identifier for Order.
+FactSalesTransactions,one signed sales-line or return posting,OrderLineId,integer,Stable identifier for OrderLine.
+FactSalesTransactions,one signed sales-line or return posting,ProductId,integer,Stable identifier for Product.
+FactSalesTransactions,one signed sales-line or return posting,LocationId,integer,Stable identifier for Location.
+FactSalesTransactions,one signed sales-line or return posting,ChannelId,integer,Stable identifier for Channel.
+FactSalesTransactions,one signed sales-line or return posting,CustomerId,integer,Stable identifier for Customer.
+FactSalesTransactions,one signed sales-line or return posting,TransactionType,text,Transaction Type.
+FactSalesTransactions,one signed sales-line or return posting,Quantity,integer,Quantity.
+FactSalesTransactions,one signed sales-line or return posting,NetAmount,decimal,Signed sales amount after discount; negative for refunds. Excludes tax and shipping.
+FactSalesTransactions,one signed sales-line or return posting,COGS,decimal,"Signed moving-average issue cost, reversed at original issue cost on restockable returns."
+FactSalesTransactions,one signed sales-line or return posting,DiscountAmount,decimal,Line discount before returns; do not subtract again from NetAmount.
+FactShipments,one complete order shipment,ShipmentId,integer,Stable identifier for Shipment.
+FactShipments,one complete order shipment,OrderId,integer,Stable identifier for Order.
+FactShipments,one complete order shipment,ShipDate,ISO date,Ship Date.
+FactShipments,one complete order shipment,LocationId,integer,Stable identifier for Location.
+FactShipments,one complete order shipment,OrderDate,ISO date,Order Date.
+FactShipments,one complete order shipment,ChannelId,integer,Stable identifier for Channel.
+FactShipments,one complete order shipment,PromisedDate,ISO date,"Customer promised ship/fulfillment date, not promised delivery."
+FactShipments,one complete order shipment,FulfillmentDays,integer,Fulfillment Days.
+FactShipments,one complete order shipment,IsLate,integer,Is Late.
+FactSupportTickets,one order-linked incident ticket,TicketId,integer,Stable identifier for Ticket.
+FactSupportTickets,one order-linked incident ticket,OrderId,integer,Stable identifier for Order.
+FactSupportTickets,one order-linked incident ticket,OpenedAt,ISO timestamp,Opened At.
+FactSupportTickets,one order-linked incident ticket,ResolvedAt,ISO timestamp,Resolved At.
+FactSupportTickets,one order-linked incident ticket,SLADeadline,ISO timestamp,S L A Deadline.
+FactSupportTickets,one order-linked incident ticket,Category,text,Category.
+FactSupportTickets,one order-linked incident ticket,Severity,text,Severity.
+FactSupportTickets,one order-linked incident ticket,Status,text,Status.
+FactSupportTickets,one order-linked incident ticket,Owner,text,Owner.
+FactSupportTickets,one order-linked incident ticket,RepeatKey,text,"Root-cause grouping for repeat-incident counts, not a duplicate ticket identifier."
+FactSupportTickets,one order-linked incident ticket,ResolutionHours,text,"Elapsed hours to resolution, blank for open tickets."
+FactSupportTickets,one order-linked incident ticket,SLAEligible,integer,1 for resolved tickets or open tickets past their deadline at cutoff.
+FactSupportTickets,one order-linked incident ticket,SLAMet,integer,1 only when resolved on or before the SLA deadline.
+InjectedAnomalies,one documented order or PO exception,AnomalyId,integer,Stable identifier for Anomaly.
+InjectedAnomalies,one documented order or PO exception,Scenario,text,Scenario.
+InjectedAnomalies,one documented order or PO exception,Entity,text,Entity.
+InjectedAnomalies,one documented order or PO exception,EntityId,integer,Stable identifier for Entity.
+InjectedAnomalies,one documented order or PO exception,Issue,text,Issue.
+InjectedAnomalies,one documented order or PO exception,StartDate,ISO date,Start Date.
+InjectedAnomalies,one documented order or PO exception,Cohort,integer,Scenario truth flag for the targeted assortment. Hidden from business report; used for scenario verification.

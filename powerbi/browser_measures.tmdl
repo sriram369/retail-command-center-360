@@ -1,0 +1,150 @@
+createOrReplace
+
+	table _Measures
+		column _Anchor
+			dataType: int64
+			isHidden
+			sourceColumn: [_Anchor]
+		partition _Measures = calculated
+			mode: import
+			source = ROW("_Anchor", 1)
+
+		measure 'Net Sales' = SUM(ReportFinance[NetSales])
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'COGS' = SUM(ReportFinance[COGS])
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Gross Profit' = [Net Sales] - [COGS]
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Gross Margin %' = DIVIDE([Gross Profit], [Net Sales])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Sales Budget' = SUM(ReportFinance[SalesBudget])
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Budget Variance' = [Net Sales] - [Sales Budget]
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Budget Variance %' = DIVIDE([Budget Variance], [Sales Budget])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Previous Period Sales' = CALCULATE([Net Sales], DATEADD(DimDate7[Date], -1, MONTH))
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Sales Growth %' = DIVIDE([Net Sales] - [Previous Period Sales], [Previous Period Sales])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Units Sold' = SUM(ReportFinance[UnitsSold])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Return Rate' = DIVIDE(SUM(ReportFinance[UnitsReturned]), [Units Sold])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Average Order Value' = DIVIDE([Net Sales], SUM(ReportFinance[FulfilledOrders]))
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Current Inventory Value' = SUM(ReportInventory[InventoryValue])
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Stockout Risk Count' = SUM(ReportInventory[StockoutRisk])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Units On Hand' = SUM(ReportInventory[UnitsOnHand])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Integration Success Rate' = DIVIDE(SUM(ReportSystems[SuccessfulEvents]), SUM(ReportSystems[AttemptedEvents]))
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Failed Integration Events' = SUM(ReportSystems[FailedEvents])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'SLA Compliance Rate' = DIVIDE(SUM(ReportSystems[SLAMet]), SUM(ReportSystems[SLAEligible]))
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Mean Time to Resolution' = DIVIDE(SUM(ReportSystems[ResolutionHours]), SUM(ReportSystems[ResolvedTickets]))
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Orders Awaiting Reconciliation' = CALCULATE(COUNTROWS(ReportReconciliation6), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation")
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Pending Purchase Orders' = CALCULATE(COUNTROWS(ReportPurchasing5), ReportPurchasing5[POStatus] <> "Received")
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Gross Margin Q3 2026' = DIVIDE([Gross Profit Q3 2026], [Net Sales Q3 2026])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Net Sales Q3 2026' = CALCULATE([Net Sales], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2026,7,1), ReportFinance[MonthStart] <= DATE(2026,9,1))
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Gross Profit Q3 2026' = CALCULATE([Gross Profit], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2026,7,1), ReportFinance[MonthStart] <= DATE(2026,9,1))
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Net Sales Q3 2025' = CALCULATE([Net Sales], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2025,7,1), ReportFinance[MonthStart] <= DATE(2025,9,1))
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Gross Margin Q3 2025' = CALCULATE([Gross Margin %], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2025,7,1), ReportFinance[MonthStart] <= DATE(2025,9,1))
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Q3 Sales Growth YoY' = DIVIDE([Net Sales Q3 2026] - [Net Sales Q3 2025], [Net Sales Q3 2025])
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Q3 Margin Change pp' = ([Gross Margin Q3 2026] - [Gross Margin Q3 2025]) * 100
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Category Gross Margin %' = DIVIDE(SUM(ReportCategory[GrossProfit]), SUM(ReportCategory[NetSales]))
+			formatString: 0.0%
+			displayFolder: Retail360
+
+		measure 'Open Support Tickets' = SUM(ReportSystems[OpenTickets])
+			formatString: 0.00
+			displayFolder: Retail360
+
+		measure 'Ignored Duplicate Events' = SUM(ReportSystems[DuplicateEvents])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Repeat Incidents' = SUM(ReportSystems[RepeatIncidents])
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Data Quality Exceptions' = CALCULATE(COUNTROWS(ReportReconciliation6), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation", ReportReconciliation6[ExceptionType] IN {"Missing webhook", "SKU mapping"})
+			formatString: #,##0
+			displayFolder: Retail360
+
+		measure 'Order Value Awaiting Reconciliation' = CALCULATE(SUM(ReportReconciliation6[OrderedAmount]), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation")
+			formatString: "$"#,##0
+			displayFolder: Retail360
+
+		measure 'Integration Failure Rate' = DIVIDE(SUM(ReportSystems[FailedEvents]), SUM(ReportSystems[AttemptedEvents]))
+			formatString: 0.0%
+			displayFolder: Retail360

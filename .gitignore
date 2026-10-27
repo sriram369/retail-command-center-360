@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.venv/
+node_modules
+*.inspect.ndjson
+reports/workbook_previews/
+reports/workbook_payload.json
+reports/operations_payload.json

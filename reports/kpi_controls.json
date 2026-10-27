@@ -1,0 +1,57 @@
+{
+  "cutoff": "2026-09-30",
+  "net_sales": 6626438.21,
+  "cogs": 2725435.5507,
+  "gross_profit": 3901002.6593,
+  "gross_margin": 0.5887027895941099,
+  "sales_budget": 5037225.0,
+  "sales_vs_budget": 1589213.210000001,
+  "fulfilled_orders": 23425,
+  "eligible_orders": 23495,
+  "fulfillment_rate": 0.9970206426899341,
+  "average_fulfillment_days": 0.8070864461045891,
+  "late_orders": 245,
+  "open_late_orders": 23,
+  "units_sold": 63739,
+  "units_returned": 1513,
+  "return_rate": 0.0237374292034704,
+  "average_order_value": 282.87889903948775,
+  "inventory_value": 1913202.6723999998,
+  "units_on_hand": 42460,
+  "stockout_risk_sku_locations": 6,
+  "low_stock_sku_locations": 8,
+  "inventory_turnover_90d_annualized": 0.9536850021409824,
+  "days_inventory_90d": 382.72595163035015,
+  "pending_purchase_orders": 17,
+  "integration_success_rate": 0.9632048092868989,
+  "failed_integration_events": 355,
+  "deduplicated_events": 306,
+  "unreconciled_orders": 28,
+  "unreconciled_order_value": 4132.66,
+  "missing_event_orders": 4,
+  "open_tickets": 5,
+  "sla_compliance": 0.5096525096525096,
+  "mean_resolution_hours": 60.78346456692913,
+  "repeat_incidents": 255,
+  "high_priority_exceptions": 28,
+  "q3_comparison": [
+    {
+      "Year": 2025,
+      "NetSales": 978241.72,
+      "COGS": 394246.4103,
+      "GrossMargin": 0.5969846692901218
+    },
+    {
+      "Year": 2026,
+      "NetSales": 1075281.5899999999,
+      "COGS": 462933.4234,
+      "GrossMargin": 0.5694770302912002
+    }
+  ],
+  "sql_control": {
+    "net_sales": 6626438.21,
+    "cogs": 2725435.5507
+  },
+  "q3_sales_growth": 0.09919825337238719,
+  "q3_margin_change_pp": -2.7507638998921613
+}

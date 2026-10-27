@@ -1,0 +1,44 @@
+{
+  "seed": 3602026,
+  "start_date": "2025-04-01",
+  "reporting_cutoff": "2026-09-30",
+  "company": "Aster & Co. (fictional)",
+  "currency": "USD",
+  "timezone": "America/New_York",
+  "risk_start": "2026-07-01",
+  "risk_product_ids": [
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170
+  ],
+  "risk_locations": [
+    2,
+    5
+  ],
+  "scenarios": {
+    "A": "Travel and pouch discount increases and supplier inflation after January 2026; higher cohort returns from July.",
+    "B": "Boston and Miami cohort transfer targets reduced to 3 units from July. Lifestyle excess at Chicago and Seattle.",
+    "C": "Order-linked sync failures, missing webhooks and correctly ignored duplicate webhooks.",
+    "D": "Integration incident tickets, with elapsed 24-hour/72-hour SLA rules and cutoff-aware eligibility.",
+    "E": "Cohort purchase approvals delayed 5-9 days plus supplier delivery delays 9-16 days from July."
+  },
+  "valuation": "Perpetual moving weighted average, four decimal USD; returns restore original issue cost.",
+  "recognition": "Shipment-date operational sales proxy. Not audited GAAP revenue. Tax, freight and operating expenses excluded."
+}

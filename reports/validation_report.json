@@ -1,0 +1,1437 @@
+{
+  "passed": true,
+  "check_count": 275,
+  "failed_checks": [],
+  "rows": {
+    "FactIntegrationEvents": 9954,
+    "DimStore": 7,
+    "FactBudget": 162,
+    "FactShipments": 23425,
+    "FactSalesOrders": 24000,
+    "FactSupportTickets": 259,
+    "FactSalesOrderLines": 40573,
+    "DimChannel": 3,
+    "FactReturns": 1513,
+    "DimDate": 548,
+    "FactERPOrderLinks": 23467,
+    "FactPurchaseOrders": 374,
+    "FactSalesTransactions": 41105,
+    "DimSupplier": 28,
+    "DimProduct": 200,
+    "DimCustomer": 4000,
+    "FactInventorySnapshots": 28800,
+    "FactInventoryMovements": 47192,
+    "DimLocation": 8,
+    "InjectedAnomalies": 825
+  },
+  "missing_values": {
+    "FactIntegrationEvents": {
+      "PayloadSKU": 9809
+    },
+    "DimStore": {},
+    "FactBudget": {},
+    "FactShipments": {},
+    "FactSalesOrders": {},
+    "FactSupportTickets": {
+      "ResolvedAt": 5,
+      "ResolutionHours": 5
+    },
+    "FactSalesOrderLines": {},
+    "DimChannel": {},
+    "FactReturns": {},
+    "DimDate": {},
+    "FactERPOrderLinks": {},
+    "FactPurchaseOrders": {
+      "ReceivedDate": 17
+    },
+    "FactSalesTransactions": {},
+    "DimSupplier": {},
+    "DimProduct": {},
+    "DimCustomer": {},
+    "FactInventorySnapshots": {},
+    "FactInventoryMovements": {
+      "TransferId": 43062
+    },
+    "DimLocation": {},
+    "InjectedAnomalies": {}
+  },
+  "invalid_references": 0,
+  "known_injected_exception_records": 825,
+  "checks": [
+    {
+      "check": "FactIntegrationEvents: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.EventId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactIntegrationEvents.EventDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.SourceSystem: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.EventType: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.Status: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.BusinessKey: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.Deduplicated: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimStore: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimStore: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimStore.StoreId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimStore.StoreName: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimStore.City: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimStore.State: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget.BudgetId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget.MonthStart: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget.ChannelId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget.ChannelId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactBudget.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactBudget.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactBudget.SalesBudget: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.ShipmentId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactShipments.ShipDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactShipments.OrderDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.ChannelId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.ChannelId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactShipments.PromisedDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.FulfillmentDays: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.IsLate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.OrderNumber: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.OrderDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.CustomerId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.CustomerId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesOrders.ChannelId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.ChannelId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesOrders.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesOrders.PromisedDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.OrderStatus: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.PaymentStatus: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.IntegrationIssue: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.AvailableDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.Cohort: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.TicketId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSupportTickets.OpenedAt: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.SLADeadline: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.Category: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.Severity: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.Status: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.Owner: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.RepeatKey: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.SLAEligible: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSupportTickets.SLAMet: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.OrderLineId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesOrderLines.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.ProductId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesOrderLines.Quantity: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.UnitPrice: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.DiscountAmount: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrderLines.OrderedAmount: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimChannel: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimChannel: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimChannel.ChannelId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimChannel.Channel: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.ReturnId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactReturns.OrderLineId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.OrderLineId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactReturns.ReturnDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.ProductId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactReturns.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactReturns.ChannelId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.ChannelId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactReturns.CustomerId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.CustomerId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactReturns.Quantity: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.RefundAmount: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.CostReversal: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.Reason: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.Disposition: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.Date: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.Year: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.MonthNumber: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.Month: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.MonthStart: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.Quarter: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimDate.DayOfWeek: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactERPOrderLinks: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactERPOrderLinks: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactERPOrderLinks.ERPLinkId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactERPOrderLinks.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactERPOrderLinks.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactERPOrderLinks.ERPOrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactERPOrderLinks.SyncedDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.PurchaseOrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.PONumber: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.ProductId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactPurchaseOrders.SupplierId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.SupplierId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactPurchaseOrders.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactPurchaseOrders.PODate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.PromisedReceiptDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.Quantity: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.UnitCost: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.POAmount: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.ApprovalDays: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.POStatus: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.ScenarioAffected: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.SalesTransactionId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.PostingDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.OrderId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.OrderId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesTransactions.OrderLineId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.OrderLineId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesTransactions.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.ProductId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesTransactions.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesTransactions.ChannelId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.ChannelId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesTransactions.CustomerId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.CustomerId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactSalesTransactions.TransactionType: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.Quantity: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.NetAmount: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.COGS: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.DiscountAmount: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimSupplier: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimSupplier: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimSupplier.SupplierId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimSupplier.SupplierName: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimSupplier.StandardLeadDays: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimSupplier.Terms: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.SKU: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.ProductName: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.Category: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.SupplierId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.SupplierId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "DimProduct.RetailPrice: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.OpeningUnitCost: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimProduct.Customizable: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer.CustomerId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer.CustomerCode: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer.Segment: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer.State: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimCustomer.Synthetic: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.SnapshotId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.SnapshotDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactInventorySnapshots.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.ProductId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactInventorySnapshots.UnitsOnHand: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.InventoryValue: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.WeightedAverageCost: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.MovementId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.MovementDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.LocationId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactInventoryMovements.ProductId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.ProductId: foreign key",
+      "passed": true,
+      "detail": "0 invalid references"
+    },
+    {
+      "check": "FactInventoryMovements.MovementType: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.QuantityChange: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.ValueChange: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.ReferenceType: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.ReferenceId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimLocation: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimLocation: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimLocation.LocationId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimLocation.LocationName: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimLocation.LocationType: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DimLocation.State: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies: primary key unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies: manifest matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.AnomalyId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.Scenario: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.Entity: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.EntityId: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.Issue: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.StartDate: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "InjectedAnomalies.Cohort: required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Canceled orders never posted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Canceled orders never shipped",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exactly one shipment per fulfilled order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Duplicate webhooks never duplicate finalized sales",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "One ERP business order per source order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Sales line amount matches order line",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Sales quantities match order lines",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Returns reference actual completed sales",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Return dates follow sales",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Return belongs to correct order and product",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Returns do not exceed sold quantities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Refunds use original discounted unit price",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No negative physical inventory",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No negative inventory value",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Every monthly snapshot reconciles to movements",
+      "passed": true,
+      "detail": "max quantity delta=0; value delta=0.00000000"
+    },
+    {
+      "check": "Transfers conserve units and value",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Issues use moving weighted average cost",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "COGS reconciles to physical shipment issues",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Received PO units and costs reconcile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No shipment occurs before order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SLA eligibility includes overdue open tickets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SLA compliance uses resolution deadline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "MTTR uses closed tickets only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactIntegrationEvents.EventDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.OrderDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactShipments.ShipDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesOrders.OrderDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactReturns.ReturnDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.PODate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactPurchaseOrders.ReceivedDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactSalesTransactions.PostingDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventorySnapshots.SnapshotDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FactInventoryMovements.MovementDate: cutoff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario C anomalies documented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario E anomalies documented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SQL structural check 1",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL structural check 2",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL structural check 3",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL structural check 4",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL structural check 5",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL structural check 6",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL structural check 7",
+      "passed": true,
+      "detail": "0 exceptions"
+    },
+    {
+      "check": "SQL totals equal financial report mart",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario A: comparable Q3 revenue grows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario A: comparable Q3 margin declines",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario B: inventory imbalance detectable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario C: missing records detectable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario C: duplicate webhooks present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario D: SLA breaches present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scenario E: approval delays present",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

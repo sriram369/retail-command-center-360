@@ -1,0 +1,39 @@
+{
+  "name": "Aster Executive | Navy & Teal",
+  "dataColors": [
+    "#0F766E",
+    "#325E85",
+    "#C48B42",
+    "#8B9CAF",
+    "#B54738",
+    "#14233B"
+  ],
+  "background": "#F7F9FB",
+  "foreground": "#14233B",
+  "tableAccent": "#0F766E",
+  "good": "#0F766E",
+  "neutral": "#C48B42",
+  "bad": "#B54738",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 14,
+      "color": "#14233B"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#63748A"
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 30,
+      "color": "#14233B"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "fontSize": 12,
+      "color": "#14233B"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "captured": "2026-10-27",
+  "report_url": "https://app.powerbi.com/groups/me/reports/45421c92-9cfc-4bca-ae5d-4f64fcd1b2e3",
+  "native_tables": 16,
+  "native_measures": 51,
+  "relationships": 17,
+  "operational_query": {
+    "status": "passed",
+    "fulfillment_rate": "0.9970206427",
+    "fulfilled_orders": 23425,
+    "eligible_orders": 23495,
+    "late_orders": 245,
+    "open_late_orders": 23,
+    "average_days": "0.8070864461",
+    "days_inventory": "382.7259516304",
+    "turnover": "0.9536850021",
+    "sla": "0.5096525097",
+    "mttr_hours": "60.7834645669",
+    "tickets": 259,
+    "repeat_incidents": 255,
+    "risk_pairs": 6
+  },
+  "product_query": {
+    "status": "passed",
+    "net_sales": 6626438.21,
+    "gross_profit": 3901002.66,
+    "q3_2026_sales": 1075281.59,
+    "risk_under_q3_filter": 6,
+    "inventory_under_q3_filter": 1913202.67
+  },
+  "observed_ui_checks": [
+    "Three saved pages reopened and navigated in viewing mode",
+    "Q3 2026 slicer: net sales 1,075,281.59; gross margin 56.9%; budget variance 18.4%",
+    "Finance filter cleared to all dates",
+    "Inventory exception table filtered to stockout risk > 0",
+    "Reconciliation table filtered to 28 awaiting orders; exposure 4,132.66"
+  ],
+  "limitations": [
+    "No configured native order/SKU drillthrough page",
+    "No scheduled refresh or real vendor connection",
+    "Additional detailed charts are supplied as SQL outputs and build specifications",
+    "Browser PDF export initiated but its downloaded file was not retained; portfolio PDF uses identified browser captures"
+  ]
+}

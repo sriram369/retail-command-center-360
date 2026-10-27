@@ -1,0 +1,82 @@
+{
+  "DimDate": {
+    "rows": 548,
+    "sha256": "97f865a3e2d5b6d2420eaa0a9449b99c3a44c47aa5d938a7c1baca8650ab704f"
+  },
+  "DimStore": {
+    "rows": 7,
+    "sha256": "b43fbf4bf1b01983b4f1ea251a6144c6be5d5f020932699e85fb9f8293860b66"
+  },
+  "DimLocation": {
+    "rows": 8,
+    "sha256": "a7c49a773beb74198d29d8126b588c7cd452845443e7df8902b1a4cea490ae90"
+  },
+  "DimChannel": {
+    "rows": 3,
+    "sha256": "2852ff519c00a85bb9927b56ab579ab9e31c0431723a607e1e82270bdd312ece"
+  },
+  "DimSupplier": {
+    "rows": 28,
+    "sha256": "726414125d77476a171c6edcf6416a6f349793911a64baebc95cb1a4a9f858f4"
+  },
+  "DimProduct": {
+    "rows": 200,
+    "sha256": "52357b54c41ff7965b5ac492ed7bfa2875c9c11971ad088553d7af19a844e12f"
+  },
+  "DimCustomer": {
+    "rows": 4000,
+    "sha256": "b6b9fa52025da48950775ea3cbc821ca17a7af21f4b32b86d15274b808ec62d7"
+  },
+  "FactSalesOrders": {
+    "rows": 24000,
+    "sha256": "8d545763cf4fbac26ea17f5472a1ad241a30c566a8488b0974d482f017bb6faa"
+  },
+  "FactSalesOrderLines": {
+    "rows": 40573,
+    "sha256": "c1805ce6fbdebbedbc0de029a1b0e7b3d6809b7b452d8003670c7c522efee160"
+  },
+  "FactShipments": {
+    "rows": 23425,
+    "sha256": "a7a52e8086d746d221cc29a4585e0adfd197c033e36a3e811a51e0dd492dde7f"
+  },
+  "FactReturns": {
+    "rows": 1513,
+    "sha256": "a38e9619984a491645d64e9b4a11a9b1991463703ff4d660a01113d29ad47190"
+  },
+  "FactSalesTransactions": {
+    "rows": 41105,
+    "sha256": "513ddf44481b220412e57721090d1c33d1567abd6a16f1ef8528a5d7d46c470d"
+  },
+  "FactPurchaseOrders": {
+    "rows": 374,
+    "sha256": "fc072ad5f8f177314379bb7c8a8952c43e6f88cfb8af55b6279dcff63454ab03"
+  },
+  "FactInventoryMovements": {
+    "rows": 47192,
+    "sha256": "94b288cfe546000c8d019de61ddac08c5ab4ea6b54277bdfba295efb4f48504f"
+  },
+  "FactInventorySnapshots": {
+    "rows": 28800,
+    "sha256": "2862e0cd7294eb787a1ffdc4714883818dd195554ea85a7fbcf7c93b29a64cdf"
+  },
+  "FactIntegrationEvents": {
+    "rows": 9954,
+    "sha256": "2a1125df4bf6bbf21e6c6ce5732d86ffd60908559c3785656c40ce32d0c5e33d"
+  },
+  "FactERPOrderLinks": {
+    "rows": 23467,
+    "sha256": "7d6dd97366cc3f4edebad216f2592c784f84c8d62e48f13b3edeea09d37fc3b1"
+  },
+  "FactBudget": {
+    "rows": 162,
+    "sha256": "386da754a31dece6c2372d424a3c82b223caeafca4ae0149f13e31e9b82c93d1"
+  },
+  "FactSupportTickets": {
+    "rows": 259,
+    "sha256": "ae58156f9f9bd213c9ecd3c24825d8c6c421f84e6341aed2e2a182f56fffcb37"
+  },
+  "InjectedAnomalies": {
+    "rows": 825,
+    "sha256": "8dd1130a0e230984ecca910462e5f9647c5fca7c78338dff7e3587cdb1c65312"
+  }
+}

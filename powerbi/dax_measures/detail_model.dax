@@ -1,0 +1,190 @@
+// Create as an individual measure.
+Net Sales =
+SUM(FactSalesTransactions[NetAmount])
+
+// Create as an individual measure.
+COGS =
+SUM(FactSalesTransactions[COGS])
+
+// Create as an individual measure.
+Gross Profit =
+[Net Sales] - [COGS]
+
+// Create as an individual measure.
+Gross Margin % =
+DIVIDE([Gross Profit], [Net Sales])
+
+// Create as an individual measure.
+Previous Period Sales =
+CALCULATE([Net Sales], DATEADD(DimDate[Date], -1, MONTH))
+
+// Create as an individual measure.
+Sales Growth % =
+DIVIDE([Net Sales] - [Previous Period Sales], [Previous Period Sales])
+
+// Create as an individual measure.
+Prior Year Sales =
+CALCULATE([Net Sales], SAMEPERIODLASTYEAR(DimDate[Date]))
+
+// Create as an individual measure.
+Sales Growth YoY % =
+DIVIDE([Net Sales] - [Prior Year Sales], [Prior Year Sales])
+
+// Create as an individual measure.
+Sales Budget =
+IF(ISFILTERED(DimProduct), BLANK(), SUM(FactBudget[SalesBudget]))
+
+// Create as an individual measure.
+Budget Variance =
+IF(NOT ISBLANK([Sales Budget]), [Net Sales] - [Sales Budget])
+
+// Create as an individual measure.
+Budget Variance % =
+DIVIDE([Budget Variance], [Sales Budget])
+
+// Create as an individual measure.
+Units Sold =
+CALCULATE(SUM(FactSalesTransactions[Quantity]), FactSalesTransactions[TransactionType] = "Sale")
+
+// Create as an individual measure.
+Units Returned =
+-CALCULATE(SUM(FactSalesTransactions[Quantity]), FactSalesTransactions[TransactionType] = "Return")
+
+// Create as an individual measure.
+Return Rate =
+DIVIDE([Units Returned], [Units Sold])
+
+// Create as an individual measure.
+Shipped Orders =
+CALCULATE(DISTINCTCOUNT(FactSalesTransactions[OrderId]), FactSalesTransactions[TransactionType] = "Sale")
+
+// Create as an individual measure.
+Average Order Value =
+DIVIDE([Net Sales], [Shipped Orders])
+
+// Create as an individual measure.
+Ordered Revenue =
+CALCULATE(SUM(ReportOrderLines[OrderedAmount]), ReportOrderLines[OrderStatus] <> "Canceled")
+
+// Create as an individual measure.
+Inventory Value =
+VAR AsOfDate = MAX(DimDate[Date])
+VAR SnapshotDate = CALCULATE(MAX(FactInventorySnapshots[SnapshotDate]), REMOVEFILTERS(DimDate), FactInventorySnapshots[SnapshotDate] <= AsOfDate)
+RETURN IF(NOT ISBLANK(SnapshotDate), CALCULATE(SUM(FactInventorySnapshots[InventoryValue]), REMOVEFILTERS(DimDate), FactInventorySnapshots[SnapshotDate] = SnapshotDate))
+
+// Create as an individual measure.
+Units On Hand =
+VAR AsOfDate = MAX(DimDate[Date])
+VAR SnapshotDate = CALCULATE(MAX(FactInventorySnapshots[SnapshotDate]), REMOVEFILTERS(DimDate), FactInventorySnapshots[SnapshotDate] <= AsOfDate)
+RETURN IF(NOT ISBLANK(SnapshotDate), CALCULATE(SUM(FactInventorySnapshots[UnitsOnHand]), REMOVEFILTERS(DimDate), FactInventorySnapshots[SnapshotDate] = SnapshotDate))
+
+// Create as an individual measure.
+Current Inventory Value =
+SUM(ReportInventory[InventoryValue])
+
+// Create as an individual measure.
+Stockout Risk Count =
+SUM(ReportInventory[StockoutRisk])
+
+// Create as an individual measure.
+Low Stock SKU Count =
+SUM(ReportInventory[LowStock])
+
+// Create as an individual measure.
+Eligible Orders =
+SUM(ReportOrders[EligibleOrder])
+
+// Create as an individual measure.
+Fulfilled Orders =
+SUM(ReportOrders[FulfilledOrder])
+
+// Create as an individual measure.
+Fulfillment Rate =
+DIVIDE([Fulfilled Orders], [Eligible Orders])
+
+// Create as an individual measure.
+Late Orders =
+SUM(ReportOrders[LateOrder])
+
+// Create as an individual measure.
+Open Late Orders =
+SUM(ReportOrders[OpenLateOrder])
+
+// Create as an individual measure.
+Average Fulfillment Duration =
+DIVIDE(SUM(ReportOrders[FulfillmentDays]), [Fulfilled Orders])
+
+// Create as an individual measure.
+Pending Purchase Orders =
+CALCULATE(COUNTROWS(ReportPurchasing), ReportPurchasing[POStatus] <> "Received")
+
+// Create as an individual measure.
+Integration Attempts =
+CALCULATE(COUNTROWS(FactIntegrationEvents), FactIntegrationEvents[Status] IN {"Success", "Failed"})
+
+// Create as an individual measure.
+Failed Integration Events =
+CALCULATE(COUNTROWS(FactIntegrationEvents), FactIntegrationEvents[Status] = "Failed")
+
+// Create as an individual measure.
+Integration Failure Rate =
+DIVIDE([Failed Integration Events], [Integration Attempts])
+
+// Create as an individual measure.
+Integration Success Rate =
+DIVIDE([Integration Attempts] - [Failed Integration Events], [Integration Attempts])
+
+// Create as an individual measure.
+Ignored Duplicate Events =
+CALCULATE(COUNTROWS(FactIntegrationEvents), FactIntegrationEvents[Deduplicated] = 1)
+
+// Create as an individual measure.
+Orders Awaiting Reconciliation =
+CALCULATE(COUNTROWS(ReportReconciliation), ReportReconciliation[SyncStatus] = "Awaiting reconciliation")
+
+// Create as an individual measure.
+Data Quality Exceptions =
+CALCULATE(COUNTROWS(ReportReconciliation), ReportReconciliation[SyncStatus] = "Awaiting reconciliation", ReportReconciliation[ExceptionType] IN {"Missing webhook", "SKU mapping"})
+
+// Create as an individual measure.
+Order Value Awaiting Reconciliation =
+CALCULATE(SUM(ReportReconciliation[OrderedAmount]), ReportReconciliation[SyncStatus] = "Awaiting reconciliation")
+
+// Create as an individual measure.
+Open Support Tickets =
+SUM(ReportTickets[OpenCount])
+
+// Create as an individual measure.
+SLA Compliance Rate =
+DIVIDE(SUM(ReportTickets[SLAMet]), SUM(ReportTickets[SLAEligible]))
+
+// Create as an individual measure.
+Mean Time to Resolution =
+DIVIDE(SUM(ReportTickets[ResolutionHours]), SUM(ReportTickets[ResolvedCount]))
+
+// Create as an individual measure.
+Repeat Incidents =
+SUM(ReportTickets[RepeatIncident])
+
+// Create as an individual measure.
+High-Priority Exceptions =
+CALCULATE(COUNTROWS(ReportReconciliation), ReportReconciliation[SyncStatus] = "Awaiting reconciliation", ReportReconciliation[Cohort] = 1)
+
+// Create as an individual measure.
+Average Inventory Value 90D =
+VAR EndDate = MAX(DimDate[Date])
+VAR DataStartDate = CALCULATE(MIN(DimDate[Date]), REMOVEFILTERS(DimDate))
+RETURN IF(EndDate - 89 >= DataStartDate && NOT ISFILTERED(DimProduct) && NOT ISFILTERED(DimLocation), CALCULATE(AVERAGE(ReportDailyInventory[InventoryValue]), REMOVEFILTERS(DimDate), DATESBETWEEN(DimDate[Date], EndDate - 89, EndDate)))
+
+// Create as an individual measure.
+COGS 90D =
+VAR EndDate = MAX(DimDate[Date])
+RETURN CALCULATE([COGS], REMOVEFILTERS(DimDate), DATESBETWEEN(DimDate[Date], EndDate - 89, EndDate))
+
+// Create as an individual measure.
+Inventory Turnover 90D Annualized =
+DIVIDE([COGS 90D], [Average Inventory Value 90D]) * 365 / 90
+
+// Create as an individual measure.
+Days of Inventory on Hand =
+DIVIDE([Average Inventory Value 90D], [COGS 90D]) * 90

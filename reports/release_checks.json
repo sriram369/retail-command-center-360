@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "workbook_parity": [
+    {
+      "file": "retail360_powerbi.xlsx",
+      "sheets": 10,
+      "cells_compared": 242685,
+      "status": "passed"
+    },
+    {
+      "file": "retail360_operations.xlsx",
+      "sheets": 5,
+      "cells_compared": 46312,
+      "status": "passed"
+    }
+  ],
+  "python_compile": "passed",
+  "local_markdown_links": "passed",
+  "pdf_visual_review": "five pages inspected",
+  "core_pipeline": "run_all.py completed successfully"
+}

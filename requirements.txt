@@ -1,0 +1,5 @@
+pandas>=2.2,<3
+numpy>=1.26,<3
+Pillow>=10,<13
+# Optional portfolio PDF authoring; core analysis does not require this.
+reportlab>=4,<5

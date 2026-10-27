@@ -1,0 +1,917 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 160,
+    "sha256": "a068e5b7840be1e8d8416e5eab859beb1022c4217a1cf6f64ed8720036c78a17"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "bytes": 571,
+    "sha256": "ecf8790e8e9b48cbe7ebe13ea82022388580b2e2383787ccb80027b79d246a3b"
+  },
+  {
+    "path": "DESIGN.md",
+    "bytes": 1498,
+    "sha256": "7e6dc41d6c9d10c5db9a4860df1d1f25e41d0f3e0700b1b8c1832367afc7b0d8"
+  },
+  {
+    "path": "README.md",
+    "bytes": 6991,
+    "sha256": "d00f0ed2c52a6ada67c3d1f175607d5afa9f704a9dcd658eba0d9fae1bc979f1"
+  },
+  {
+    "path": "Retail360_Portfolio_Brief.pdf",
+    "bytes": 461044,
+    "sha256": "6b08be0c94ccb5c27cf77ceb4e22d44e81d1a971341f855a7b0b4684703e2ea5"
+  },
+  {
+    "path": "VERSION",
+    "bytes": 8,
+    "sha256": "29664df395de67d92cae1647568dbca6d4063b3bd45cc80f041e1c9a713bc940"
+  },
+  {
+    "path": "data/data_dictionary/data_dictionary.csv",
+    "bytes": 15718,
+    "sha256": "86ed0defac67d1c2d36ed349e7c55c5d3e510a4a304ca80c9cdc7dc63c6cb303"
+  },
+  {
+    "path": "data/data_dictionary/data_dictionary.md",
+    "bytes": 11387,
+    "sha256": "ea434b2e40b7a916c7a88ac095da97932bf1ee4f41373f5ec214649156566561"
+  },
+  {
+    "path": "data/manifest.json",
+    "bytes": 2524,
+    "sha256": "cae903fbd5b737754c5c04ee62e46e9da5d12cfa467389bf339baae3e20f0c81"
+  },
+  {
+    "path": "data/processed/ReportCategory.csv",
+    "bytes": 8430,
+    "sha256": "e1201a74633b92ce60e5f3bfed00d8d9d1946c4a9af31f0252994c575a0f51e4"
+  },
+  {
+    "path": "data/processed/ReportDailyFinance.csv",
+    "bytes": 19598,
+    "sha256": "76871883fc296133f222a7de931b61beae5576a0c8f73134069716a70279cc7a"
+  },
+  {
+    "path": "data/processed/ReportDailyInventory.csv",
+    "bytes": 26837,
+    "sha256": "50c566bca9ddcd58fa385436ee0529dd67aeddc1733900d9832a60b9d725e409"
+  },
+  {
+    "path": "data/processed/ReportFinance.csv",
+    "bytes": 22212,
+    "sha256": "8d5414ee2d22225805118c8a11a84583aeac6507abf28df894da6b96c3736119"
+  },
+  {
+    "path": "data/processed/ReportFulfillment.csv",
+    "bytes": 4733,
+    "sha256": "41954a1fc28cdeb2ae401179c137d83289d9a73b355a8eb8ecf1285b32de2ec0"
+  },
+  {
+    "path": "data/processed/ReportInventory.csv",
+    "bytes": 330160,
+    "sha256": "4f5c7084b97c58d9e4529d3f44d84464bf2a043b613791d8ca65dda16ef1a977"
+  },
+  {
+    "path": "data/processed/ReportMonthly.csv",
+    "bytes": 1705,
+    "sha256": "083401a8b9c136b370673501aab74ba79289a76330f00714347d09c392959552"
+  },
+  {
+    "path": "data/processed/ReportOrderLines.csv",
+    "bytes": 5158986,
+    "sha256": "3c2220f07bda74acd731133b3e96985f8d8d6bf0f7a7cbb5b7609bcfcfded12c"
+  },
+  {
+    "path": "data/processed/ReportOrders.csv",
+    "bytes": 2642365,
+    "sha256": "2b9c69105add49d6710d9f84a8ad00b799f03e14bc0efa0a999f4e4598697c37"
+  },
+  {
+    "path": "data/processed/ReportProduct.csv",
+    "bytes": 332212,
+    "sha256": "e5f6a7fd54fe8d8984f46a5e08b36639f01ede6515b1dbc1192eb6ac0c3e6884"
+  },
+  {
+    "path": "data/processed/ReportPurchasing.csv",
+    "bytes": 70560,
+    "sha256": "10cec0f8dcda33439c5b53ab6cc6b3022a0999468124084a67bbaa256bb37e23"
+  },
+  {
+    "path": "data/processed/ReportReconciliation.csv",
+    "bytes": 1317642,
+    "sha256": "89decef8002bbbce234b3c5707d71c770809505109bd10784565c5faaccfe27f"
+  },
+  {
+    "path": "data/processed/ReportSystems.csv",
+    "bytes": 1081,
+    "sha256": "03797fc35fa8eba7bfee301b82d0a55cdaf32b84613f8eb0daf8a5e74637f2e4"
+  },
+  {
+    "path": "data/processed/ReportTickets.csv",
+    "bytes": 46019,
+    "sha256": "d2e8bc101a540f93c2f5d1fc937ded3d6e0daa6cce76b207fd6119f2c6d1f01d"
+  },
+  {
+    "path": "data/processed/retail360.sqlite",
+    "bytes": 25882624,
+    "sha256": "ebb5ec34f02e3daab39b5efc8e0db44b6ad68f7892ebe2f29ca29c15174c3fd4"
+  },
+  {
+    "path": "data/raw/DimChannel.csv",
+    "bytes": 52,
+    "sha256": "2852ff519c00a85bb9927b56ab579ab9e31c0431723a607e1e82270bdd312ece"
+  },
+  {
+    "path": "data/raw/DimCustomer.csv",
+    "bytes": 111055,
+    "sha256": "b6b9fa52025da48950775ea3cbc821ca17a7af21f4b32b86d15274b808ec62d7"
+  },
+  {
+    "path": "data/raw/DimDate.csv",
+    "bytes": 29273,
+    "sha256": "97f865a3e2d5b6d2420eaa0a9449b99c3a44c47aa5d938a7c1baca8650ab704f"
+  },
+  {
+    "path": "data/raw/DimLocation.csv",
+    "bytes": 256,
+    "sha256": "a7c49a773beb74198d29d8126b588c7cd452845443e7df8902b1a4cea490ae90"
+  },
+  {
+    "path": "data/raw/DimProduct.csv",
+    "bytes": 13605,
+    "sha256": "52357b54c41ff7965b5ac492ed7bfa2875c9c11971ad088553d7af19a844e12f"
+  },
+  {
+    "path": "data/raw/DimStore.csv",
+    "bytes": 220,
+    "sha256": "b43fbf4bf1b01983b4f1ea251a6144c6be5d5f020932699e85fb9f8293860b66"
+  },
+  {
+    "path": "data/raw/DimSupplier.csv",
+    "bytes": 1073,
+    "sha256": "726414125d77476a171c6edcf6416a6f349793911a64baebc95cb1a4a9f858f4"
+  },
+  {
+    "path": "data/raw/FactBudget.csv",
+    "bytes": 5131,
+    "sha256": "386da754a31dece6c2372d424a3c82b223caeafca4ae0149f13e31e9b82c93d1"
+  },
+  {
+    "path": "data/raw/FactERPOrderLinks.csv",
+    "bytes": 799412,
+    "sha256": "7d6dd97366cc3f4edebad216f2592c784f84c8d62e48f13b3edeea09d37fc3b1"
+  },
+  {
+    "path": "data/raw/FactIntegrationEvents.csv",
+    "bytes": 748864,
+    "sha256": "2a1125df4bf6bbf21e6c6ce5732d86ffd60908559c3785656c40ce32d0c5e33d"
+  },
+  {
+    "path": "data/raw/FactInventoryMovements.csv",
+    "bytes": 3088881,
+    "sha256": "94b288cfe546000c8d019de61ddac08c5ab4ea6b54277bdfba295efb4f48504f"
+  },
+  {
+    "path": "data/raw/FactInventorySnapshots.csv",
+    "bytes": 1334923,
+    "sha256": "2862e0cd7294eb787a1ffdc4714883818dd195554ea85a7fbcf7c93b29a64cdf"
+  },
+  {
+    "path": "data/raw/FactPurchaseOrders.csv",
+    "bytes": 39276,
+    "sha256": "fc072ad5f8f177314379bb7c8a8952c43e6f88cfb8af55b6279dcff63454ab03"
+  },
+  {
+    "path": "data/raw/FactReturns.csv",
+    "bytes": 140275,
+    "sha256": "a38e9619984a491645d64e9b4a11a9b1991463703ff4d660a01113d29ad47190"
+  },
+  {
+    "path": "data/raw/FactSalesOrderLines.csv",
+    "bytes": 1918488,
+    "sha256": "c1805ce6fbdebbedbc0de029a1b0e7b3d6809b7b452d8003670c7c522efee160"
+  },
+  {
+    "path": "data/raw/FactSalesOrders.csv",
+    "bytes": 2049699,
+    "sha256": "8d545763cf4fbac26ea17f5472a1ad241a30c566a8488b0974d482f017bb6faa"
+  },
+  {
+    "path": "data/raw/FactSalesTransactions.csv",
+    "bytes": 3184180,
+    "sha256": "513ddf44481b220412e57721090d1c33d1567abd6a16f1ef8528a5d7d46c470d"
+  },
+  {
+    "path": "data/raw/FactShipments.csv",
+    "bytes": 1219703,
+    "sha256": "a7a52e8086d746d221cc29a4585e0adfd197c033e36a3e811a51e0dd492dde7f"
+  },
+  {
+    "path": "data/raw/FactSupportTickets.csv",
+    "bytes": 38708,
+    "sha256": "ae58156f9f9bd213c9ecd3c24825d8c6c421f84e6341aed2e2a182f56fffcb37"
+  },
+  {
+    "path": "data/raw/InjectedAnomalies.csv",
+    "bytes": 38797,
+    "sha256": "8dd1130a0e230984ecca910462e5f9647c5fca7c78338dff7e3587cdb1c65312"
+  },
+  {
+    "path": "data/retail360_operations.xlsx",
+    "bytes": 300872,
+    "sha256": "d77585b20fa2968978e14bb7d707d69571e69e819d0b6bfa246686d26a3e622f"
+  },
+  {
+    "path": "data/retail360_powerbi.xlsx",
+    "bytes": 1141068,
+    "sha256": "9857121ddc73837862878a248e4f274dc37d7e9e4e345a9a2de9539d93f5bf83"
+  },
+  {
+    "path": "data/scenario.json",
+    "bytes": 1284,
+    "sha256": "56307ff90fc6e01b0324e1faaaef98d97d26aaf41a721a1d5a8ede6eb38f8b9f"
+  },
+  {
+    "path": "docs/.nojekyll",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "docs/ai_analysis.md",
+    "bytes": 927,
+    "sha256": "1feee7a8d959fdecd3f6f3cbb2511957314a189c82c38b432cff0a5d2f0a418d"
+  },
+  {
+    "path": "docs/assets/01_financial_native.jpg",
+    "bytes": 117989,
+    "sha256": "5c2d35dedbef5d3e9f171e124c4e14184cb9472ac4e74c30f2488e4cc7192093"
+  },
+  {
+    "path": "docs/assets/02_inventory_native.jpg",
+    "bytes": 137865,
+    "sha256": "d92a5e55629caf334705f371285371ac197ebffce380dd631d5e7cb6c5705dd7"
+  },
+  {
+    "path": "docs/assets/03_systems_native.jpg",
+    "bytes": 122293,
+    "sha256": "aa9f6848d9c28f7dbf5f55498fcfe360d5a63346852def6d904d2cb92d4e8c18"
+  },
+  {
+    "path": "docs/assets/Retail360_Portfolio_Brief.pdf",
+    "bytes": 461044,
+    "sha256": "6b08be0c94ccb5c27cf77ceb4e22d44e81d1a971341f855a7b0b4684703e2ea5"
+  },
+  {
+    "path": "docs/assumptions_and_limitations.md",
+    "bytes": 2043,
+    "sha256": "b7bdf9dc241369312b3ca2ea06af94d9697738f218e0bd0b71b1cecdde25acb7"
+  },
+  {
+    "path": "docs/business_requirements.md",
+    "bytes": 3586,
+    "sha256": "9f5ccc5e173d2ed7ba73bcfcabcde84d3cd982470adaf9fbe319830b965fc193"
+  },
+  {
+    "path": "docs/data_flow_diagram.md",
+    "bytes": 966,
+    "sha256": "2eda2888cca574b98cd17864faecb5ce71db3270a96ea7c0fb9a09514e2b3754"
+  },
+  {
+    "path": "docs/data_mapping.md",
+    "bytes": 2470,
+    "sha256": "d3df59e6900b54615ec5cdcd9d568199611a43a584a6cbb43fe419a342c1a50b"
+  },
+  {
+    "path": "docs/demo.html",
+    "bytes": 5328,
+    "sha256": "8077d1efce0faf92da8cbbfc01c708d5f3a51f9e9f680305452679dbf299260a"
+  },
+  {
+    "path": "docs/entity_relationship_diagram.md",
+    "bytes": 1130,
+    "sha256": "b0e05cb88c8f5cc468eed983315b05c04508a5003ab3551f5ddf3b009cd935d4"
+  },
+  {
+    "path": "docs/executive_summary.md",
+    "bytes": 2821,
+    "sha256": "200ae2ca0f2e6f4c006c71a55c46c9223e008068af870f917b630c4e1261b34f"
+  },
+  {
+    "path": "docs/functional_requirements.md",
+    "bytes": 3229,
+    "sha256": "6e504c004a54a910e3cc5e161b6a3bbfb2078cc03ea39481f2d8f9a90a11563f"
+  },
+  {
+    "path": "docs/index.html",
+    "bytes": 5240,
+    "sha256": "33630ffbe203e923abf1d5b14fc2bf650c566cae5e920fde60d8c47c1d0a6b96"
+  },
+  {
+    "path": "docs/interview_demo.md",
+    "bytes": 2083,
+    "sha256": "58406537353255e7d2c58440e21a0678e64f5c9cc787a71fb6a5ec7017ad57d9"
+  },
+  {
+    "path": "docs/process_improvement.md",
+    "bytes": 2042,
+    "sha256": "3dc5d1cfea932c36840351de5306adda79024b8f5194ccb47726ca8de5c66f1a"
+  },
+  {
+    "path": "docs/resume_bullets.md",
+    "bytes": 872,
+    "sha256": "b820eb0f9374294e8140a802f21290bd8289509eed6edc2b9ef5e57412e9b993"
+  },
+  {
+    "path": "docs/site.css",
+    "bytes": 4571,
+    "sha256": "faf322c60f6afc3cb209e5fcb38ddef152ea9c4e302727fe0c63d9c0858a79e9"
+  },
+  {
+    "path": "docs/table_definitions.md",
+    "bytes": 2025,
+    "sha256": "f048fb668543b29abe76a2c96ef2ad2beb77819d17be1e23d6d02cd212f7ffa3"
+  },
+  {
+    "path": "docs/uat_test_plan.md",
+    "bytes": 2450,
+    "sha256": "1199a61944842d7f020c426d183809e910522c29cc795d89a21b18f0a9d44587"
+  },
+  {
+    "path": "docs/walkthrough.js",
+    "bytes": 1223,
+    "sha256": "d3e7355708d7b4355a8ffd0949fba5f7cec5c26f39bf35475f025bad9fe5a44b"
+  },
+  {
+    "path": "powerbi/backgrounds/01_background.png",
+    "bytes": 103811,
+    "sha256": "4d7796ad94efa0ddfb77c9f829afb1df5f9786e611a32fb717557361d9d6e64b"
+  },
+  {
+    "path": "powerbi/backgrounds/02_background.png",
+    "bytes": 84675,
+    "sha256": "d32a38786a1019e1562d314488b6d7ba67a269599634ef30894d27a34906a0f8"
+  },
+  {
+    "path": "powerbi/backgrounds/03_background.png",
+    "bytes": 100472,
+    "sha256": "f570d2c86d093e1ee2b64de365f4b273b614b00a639b753fbcc9a2071aedd677"
+  },
+  {
+    "path": "powerbi/browser_measures.tmdl",
+    "bytes": 5550,
+    "sha256": "b470fae8cc0a67b40fd341d0f677ab1cd6103819c2a228e88d9ac929c540b409"
+  },
+  {
+    "path": "powerbi/browser_relationships.tmdl",
+    "bytes": 914,
+    "sha256": "83003da4a8187a43fb653f0f23b372de0442234ca347afa76971a6afdc28a980"
+  },
+  {
+    "path": "powerbi/build_guide.md",
+    "bytes": 4707,
+    "sha256": "94ac38900be6bc3d625c164a6b88218e6369664ef7b3ff8b5a8f95a64a6988e1"
+  },
+  {
+    "path": "powerbi/dax_measures/README.md",
+    "bytes": 1693,
+    "sha256": "55dd30611ef8fceeb2d9f844571d546ade663ca0872a33f221e8cd01efd59266"
+  },
+  {
+    "path": "powerbi/dax_measures/browser_model.dax",
+    "bytes": 1482,
+    "sha256": "0384708f7d3b39e971ab2a6642f814d3fa3c5b62dd653dcc781775d9e12fdfdb"
+  },
+  {
+    "path": "powerbi/dax_measures/detail_model.dax",
+    "bytes": 6585,
+    "sha256": "8624e8f0641da3499536929357745ddddffc5f68431bf239791ebe588b06c06f"
+  },
+  {
+    "path": "powerbi/dax_measures/operations_model.dax",
+    "bytes": 3012,
+    "sha256": "0418c02c87a7c7f4c52678eb8b3d4eb656cf2905fc2cfda74f3715ceb9c4befa"
+  },
+  {
+    "path": "powerbi/detail_visual_specifications.md",
+    "bytes": 2694,
+    "sha256": "d504688dfa7a1231b9c43ef45d4584c0894d7c180738c040b90353de8aa2e2b1"
+  },
+  {
+    "path": "powerbi/model_documentation.md",
+    "bytes": 4798,
+    "sha256": "b5064d17b49eb7b12c0687d2ab92099be6318dbe54d21a2b626291f9b05e4cb4"
+  },
+  {
+    "path": "powerbi/operations_extension.tmdl",
+    "bytes": 5957,
+    "sha256": "5388920eaddcc76eb1a0cb4302879092851daff33e5418f62ccdbfd67d64dd9e"
+  },
+  {
+    "path": "powerbi/page_specifications.md",
+    "bytes": 2992,
+    "sha256": "9729562f09d5ff96fabd3a3075b4f786944e38eacf0d05cd60a9f24e07ffe500"
+  },
+  {
+    "path": "powerbi/power_query/DimChannel.m",
+    "bytes": 452,
+    "sha256": "fe152a90af778c740ef8a27638f39dbde3f256d580d3bdccf990c0dc49349634"
+  },
+  {
+    "path": "powerbi/power_query/DimCustomer.m",
+    "bytes": 532,
+    "sha256": "3c35d7081fab3ddad235340239f3e636cba15f6b86630c86b9e9a65c3b7c1c3b"
+  },
+  {
+    "path": "powerbi/power_query/DimDate.m",
+    "bytes": 569,
+    "sha256": "1d4b6eabfe9c641a3c6821175daf3df43baf1dbf7a959694bf817b78d4fdfeee"
+  },
+  {
+    "path": "powerbi/power_query/DimLocation.m",
+    "bytes": 510,
+    "sha256": "a2e407b9a71c0c3ac0d74d89584934f63da0e875db9e08cca7075a012bfa0291"
+  },
+  {
+    "path": "powerbi/power_query/DimProduct.m",
+    "bytes": 623,
+    "sha256": "2e2ceff4235e9aaf8b5b4cc23e76b4ce0990883895388be167fee90147f2cbbf"
+  },
+  {
+    "path": "powerbi/power_query/DimStore.m",
+    "bytes": 493,
+    "sha256": "5deb9ba09ab50faaa8d4d7527817d20caa9cb7cd3f85d7d84b67c4f135bfd384"
+  },
+  {
+    "path": "powerbi/power_query/DimSupplier.m",
+    "bytes": 515,
+    "sha256": "890e91223e450c8668e0d9973e6d4267ba90b5573e30d94c6b09443f52b0a616"
+  },
+  {
+    "path": "powerbi/power_query/FactBudget.m",
+    "bytes": 539,
+    "sha256": "e438a6e6c68e00e40332e3c12b74612a4684dec405c4539dad89f9e566ae8561"
+  },
+  {
+    "path": "powerbi/power_query/FactERPOrderLinks.m",
+    "bytes": 514,
+    "sha256": "84834d109f504cfed5f0909c9981ed0e1e8358a4100a000f204b6731914f319d"
+  },
+  {
+    "path": "powerbi/power_query/FactIntegrationEvents.m",
+    "bytes": 651,
+    "sha256": "21b6577a886110f7c1bb9bfa1f500fd8c25bbeca52a4e2bce094690bdf14db52"
+  },
+  {
+    "path": "powerbi/power_query/FactInventoryMovements.m",
+    "bytes": 701,
+    "sha256": "e20e6f447844e1f8f73492ef17c294b4c91f32822369f525278a73027e66d235"
+  },
+  {
+    "path": "powerbi/power_query/FactInventorySnapshots.m",
+    "bytes": 625,
+    "sha256": "7e87cdd883d3a2668d5b94be91bbe9a3fb878a34f763b7a99e6f9f0b3381fb7b"
+  },
+  {
+    "path": "powerbi/power_query/FactPurchaseOrders.m",
+    "bytes": 836,
+    "sha256": "864170c1ae3e6e14032dfd077bbd37200b759dd16fd58b6d110efcdec62be71f"
+  },
+  {
+    "path": "powerbi/power_query/FactReturns.m",
+    "bytes": 757,
+    "sha256": "5cc2349ccafc441eee49f935df072158b62dd0be2179eabac761ce2edc72df0f"
+  },
+  {
+    "path": "powerbi/power_query/FactSalesOrderLines.m",
+    "bytes": 610,
+    "sha256": "71bfba988b8207d497de50914cb9bcd4d4591d2a2f622b6c9a55aa64a447aaed"
+  },
+  {
+    "path": "powerbi/power_query/FactSalesOrders.m",
+    "bytes": 742,
+    "sha256": "1b6a5b9ac2ca7bfa172da5c570c721a16ee15b7c5422cae78addb588853aa11b"
+  },
+  {
+    "path": "powerbi/power_query/FactSalesTransactions.m",
+    "bytes": 782,
+    "sha256": "bbd8a67ce66dc425e472c52178a5d4a21370520f7d7eb3fe343ecaf6ae023ec7"
+  },
+  {
+    "path": "powerbi/power_query/FactShipments.m",
+    "bytes": 649,
+    "sha256": "1b47517c7619bcc96be447aa27d07b21a575c8bd3c77176fcb446a3facd9f2f4"
+  },
+  {
+    "path": "powerbi/power_query/FactSupportTickets.m",
+    "bytes": 758,
+    "sha256": "92139bc33c7c0fc7ac0b9d3752e9c81b4183192ce630ea282609065b68ed9694"
+  },
+  {
+    "path": "powerbi/power_query/InjectedAnomalies.m",
+    "bytes": 581,
+    "sha256": "600d2ad7f3c351e0404f64e72f289d6b81faaf8c2fea0c7820b1aca7ece011a5"
+  },
+  {
+    "path": "powerbi/power_query/ReconciliationControl.m",
+    "bytes": 681,
+    "sha256": "3b38e458b143edb32e9ea783b0c82fb928d6a4e26b06a72b034b55f4e7970e0a"
+  },
+  {
+    "path": "powerbi/power_query/ReportCategory.m",
+    "bytes": 634,
+    "sha256": "f88966a40ec0ac17d4465a7ce0629b77fb4ec11fe922b1bc4992af501069e67b"
+  },
+  {
+    "path": "powerbi/power_query/ReportDailyFinance.m",
+    "bytes": 493,
+    "sha256": "b469d8552d13c2e5d556003dc40d1f93abd32d79f3b15d02b6b4ac815ae99bd7"
+  },
+  {
+    "path": "powerbi/power_query/ReportDailyInventory.m",
+    "bytes": 569,
+    "sha256": "4d2c026758cac764228aaea176b211c6c1f0a4ac6ceb0113f1c4c97a4e6fb748"
+  },
+  {
+    "path": "powerbi/power_query/ReportFinance.m",
+    "bytes": 847,
+    "sha256": "b9f2115c4c254b5d48637e170a5b3c35502167790f4adc112b891ac8e292b9da"
+  },
+  {
+    "path": "powerbi/power_query/ReportFulfillment.m",
+    "bytes": 654,
+    "sha256": "c6e56d480d092499bf0701d0236a79f1265fcf49ecb17f7e996a1e861baffadc"
+  },
+  {
+    "path": "powerbi/power_query/ReportInventory.m",
+    "bytes": 1296,
+    "sha256": "8b35ae6455ff474a099e022c0f04f328326858d3fe2ce249c67f634bc4d202d7"
+  },
+  {
+    "path": "powerbi/power_query/ReportMonthly.m",
+    "bytes": 668,
+    "sha256": "8131be3ade28a0798d2d72cff92fbba729a6a48c92ba8362b8b89c209c785d54"
+  },
+  {
+    "path": "powerbi/power_query/ReportOrderLines.m",
+    "bytes": 924,
+    "sha256": "270c309cc1a1429aa6f2009e8152116a29adfcfc737a8524f07f75c892478556"
+  },
+  {
+    "path": "powerbi/power_query/ReportOrders.m",
+    "bytes": 947,
+    "sha256": "55458c5a3bf2ab1c0b126bdda43260a3276abbdbbbcf2cb2a6cd66426e3da83a"
+  },
+  {
+    "path": "powerbi/power_query/ReportProduct.m",
+    "bytes": 675,
+    "sha256": "3edd72f5ad7af20bba6ef406c656c74eecdc6a621181f4b67b1e58a59b232a6f"
+  },
+  {
+    "path": "powerbi/power_query/ReportPurchasing.m",
+    "bytes": 1059,
+    "sha256": "918d5e265baf78efd3e6de5e48e70454c90a13a4828593323be5cc7045659cea"
+  },
+  {
+    "path": "powerbi/power_query/ReportReconciliation.m",
+    "bytes": 947,
+    "sha256": "c84b24bf17f3321f3673405a84dbaa2d61c822afce46fd3d9f902d63cf7862a7"
+  },
+  {
+    "path": "powerbi/power_query/ReportSystems.m",
+    "bytes": 780,
+    "sha256": "58e126b9ea89e6ab7493fc73f6b506e7709af4c43edce5d76af5738c216bf3a1"
+  },
+  {
+    "path": "powerbi/power_query/ReportTickets.m",
+    "bytes": 901,
+    "sha256": "ef312b67de92c3e66c474a278b0fcd2f7f337e67d553a52d794d73ce53ecaee1"
+  },
+  {
+    "path": "powerbi/power_query/RootFolder.m",
+    "bytes": 114,
+    "sha256": "a0ae798f7d55f6c76e7e5a84811054897c2530b7897bef4742ca81decee45af7"
+  },
+  {
+    "path": "powerbi/theme.json",
+    "bytes": 727,
+    "sha256": "ecce65e81a58331c523085ccecf31f6057e338a1455aeefdd268e7a570fba7b8"
+  },
+  {
+    "path": "reports/ai_summary_demo.json",
+    "bytes": 726,
+    "sha256": "b3fbc221fda86c1b903a3f0a3eb74f474c08b4016cc826b7f54245fc4a6b9397"
+  },
+  {
+    "path": "reports/kpi_controls.json",
+    "bytes": 1656,
+    "sha256": "53a6c9da92a33d266520639122f22f02e661a7be9a7d393181e20c2bc67510d3"
+  },
+  {
+    "path": "reports/native_validation.json",
+    "bytes": 1577,
+    "sha256": "343709f858fcf2048f1f7997829248c8d980d104bddfea8ae56bb5575ccef6e2"
+  },
+  {
+    "path": "reports/operations_controls.json",
+    "bytes": 277,
+    "sha256": "d94826450ce6616ae2338ff3c4320a8f72bd2afe534b798a7b78bee035eae52a"
+  },
+  {
+    "path": "reports/powerbi_status.md",
+    "bytes": 3051,
+    "sha256": "41c8e3ee02013e2c66c3760d8dd799c28e37fabba873eac367492b63aabf2df4"
+  },
+  {
+    "path": "reports/publication_links.json",
+    "bytes": 261,
+    "sha256": "fefc9e66e67c25a9cc6278a19845cb23d04a623839fc654d3878d04cd8280d30"
+  },
+  {
+    "path": "reports/publication_status.md",
+    "bytes": 1586,
+    "sha256": "afc7ed7fd254bb7d2313d40e6c9f1e9967a0c5f5f2738330b4658c38b3143a69"
+  },
+  {
+    "path": "reports/publish_review.md",
+    "bytes": 1078,
+    "sha256": "abbf215b42da347f7772f3e8e47daba8c5f22e1b0e3265ac14ae9e4a671a0063"
+  },
+  {
+    "path": "reports/release_checks.json",
+    "bytes": 481,
+    "sha256": "c7b9660c633855fa8c33595c14e45fcddc1684470337ec7e147ce2831a29aa5a"
+  },
+  {
+    "path": "reports/reproducibility.json",
+    "bytes": 161,
+    "sha256": "c1b28db391f78b45642ba7897ffb4e2d80938472f7007cd81ce3caab122fb820"
+  },
+  {
+    "path": "reports/sql_analysis_01.csv",
+    "bytes": 1061,
+    "sha256": "ab0f546c9921c6fb8b71079409fa58180535ba0ce626e0e1e9c76de44e1b0453"
+  },
+  {
+    "path": "reports/sql_analysis_02.csv",
+    "bytes": 8126,
+    "sha256": "191197491cb225e9593b0862b509c79fc1fe367576b391820049462976babe09"
+  },
+  {
+    "path": "reports/sql_analysis_03.csv",
+    "bytes": 1487,
+    "sha256": "a8d28e1aa4b372e592309fb277a0516001d919a665430cee789f21b7efe4a064"
+  },
+  {
+    "path": "reports/sql_analysis_04.csv",
+    "bytes": 79670,
+    "sha256": "6fc82c445bebf23035b4f0a51d88ab177d920a07278ea875f32c506ad68dbc1c"
+  },
+  {
+    "path": "reports/sql_analysis_05.csv",
+    "bytes": 61,
+    "sha256": "153bc4cb73597ab16dd801593a687e9a69bc9fd29e743d2be74d293578629646"
+  },
+  {
+    "path": "reports/sql_analysis_06.csv",
+    "bytes": 594,
+    "sha256": "bdc325c503c13e83c31cc4fd59009134984fa4479338f5fc34decc8f770e6808"
+  },
+  {
+    "path": "reports/sql_analysis_07.csv",
+    "bytes": 492,
+    "sha256": "6b7d89b807229cb179e0ae958043be1b40d95f0585c056a455e19e5784fa09a8"
+  },
+  {
+    "path": "reports/sql_analysis_08.csv",
+    "bytes": 17127,
+    "sha256": "8ca382e3cf263492ee11db1cf6183bd67053a341891ca358cf20329430e2fa87"
+  },
+  {
+    "path": "reports/sql_analysis_09.csv",
+    "bytes": 411,
+    "sha256": "5809159d3a3737db7a61c959a9d5c76b146241d3b3eb5b623f446dedb6b71392"
+  },
+  {
+    "path": "reports/sql_analysis_10.csv",
+    "bytes": 195,
+    "sha256": "26d68e63cd40760aeda1684fdf475cca19a811f1bb8534f6fc70c2673afa968c"
+  },
+  {
+    "path": "reports/sql_analysis_11.csv",
+    "bytes": 93,
+    "sha256": "700434ce6420adecdee2c08d98a7c37f950b6e7bb052190ad2237fcf50882e29"
+  },
+  {
+    "path": "reports/sql_analysis_12.csv",
+    "bytes": 291,
+    "sha256": "58f4bc6c9a2ce4b08691f2e76c4b00bb5f0c8a35cec09597cb0db2360501049b"
+  },
+  {
+    "path": "reports/sql_analysis_13.csv",
+    "bytes": 529,
+    "sha256": "d4d287015592c166346a4e72a30fe0d715bc3d669fdf8f463c5798893f015276"
+  },
+  {
+    "path": "reports/sql_analysis_14.csv",
+    "bytes": 154,
+    "sha256": "5e9f0ad863138edc0bf251d5df6f579f4e7123eb8c19a6b90d80f22c39b062fa"
+  },
+  {
+    "path": "reports/sql_analysis_15.csv",
+    "bytes": 5927,
+    "sha256": "a2091896b5060e5221050f1c9be66dcf986ae93f9929711cad52457ced3fff78"
+  },
+  {
+    "path": "reports/sql_execution.json",
+    "bytes": 2832,
+    "sha256": "511afb3eaf7b256c4f575e667ecb1b9d06b97d4e2a983ebfb338b87bd117e25e"
+  },
+  {
+    "path": "reports/unittest_results.txt",
+    "bytes": 834,
+    "sha256": "11fb02b6c2f5637f592234a40f53081f8b8fb9a07fbbc7b0db1f0526fee87b54"
+  },
+  {
+    "path": "reports/unreconciled_orders.csv",
+    "bytes": 2109,
+    "sha256": "b6bb860cd756abb0e952e1f4757ec8ecba20bca982c69da5c01b4abe6d0b58b8"
+  },
+  {
+    "path": "reports/validation_report.json",
+    "bytes": 32157,
+    "sha256": "899a6f908dd5b14813e3d1c5192ae8de3b37e954ecf0f8f14eadb9049b1a345a"
+  },
+  {
+    "path": "reports/validation_report.md",
+    "bytes": 15007,
+    "sha256": "0e68e6f1189de10e8b1a0d0b358becd3ee03d1ffb1c69f909ebe41a92d9f6e4a"
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 134,
+    "sha256": "c9897d97444402581f88a38dd04bb1f395a36e3f940a97eeac4c449533757634"
+  },
+  {
+    "path": "scripts/ai_summary.py",
+    "bytes": 2781,
+    "sha256": "1027c8b3f76638bac16c4955f29c20943bf41c46b7090654139ad408b2c99cde"
+  },
+  {
+    "path": "scripts/build_dataset.py",
+    "bytes": 13229,
+    "sha256": "175775ff59d322f381c5c3b4421568021e4bed9376f4f15a3809a3adcc4a38fd"
+  },
+  {
+    "path": "scripts/build_operations.py",
+    "bytes": 2596,
+    "sha256": "c50574bb33643eb46fa97144eeb35758ceade83e264b03eca9b89af3453dfca1"
+  },
+  {
+    "path": "scripts/build_portfolio_pdf.py",
+    "bytes": 6915,
+    "sha256": "9f46fe45210e9c80545cacb2814a19ed3265031e0a198fafbaab5a6eae84304b"
+  },
+  {
+    "path": "scripts/build_submission_zip.py",
+    "bytes": 1362,
+    "sha256": "14b09750eb6c5513ad7c13dc8ef8c61337a76b0b9e0c864905a08019b22d61e0"
+  },
+  {
+    "path": "scripts/build_workbook.mjs",
+    "bytes": 3025,
+    "sha256": "b31262ef263087ae51dffafb0f73eda38eca5da386c5545daad7504899a6c9cc"
+  },
+  {
+    "path": "scripts/finalize_submission.py",
+    "bytes": 20010,
+    "sha256": "ba70aa676a41ee0b16774d1b5052034e07881b746ba080d52cfbb250689b3047"
+  },
+  {
+    "path": "scripts/generate_data.py",
+    "bytes": 18980,
+    "sha256": "13494480a8fde4b229822dcf8a84a0d8bb7b522d7e1a17e5a50a2aab95d46476"
+  },
+  {
+    "path": "scripts/package_docs.py",
+    "bytes": 38865,
+    "sha256": "f1a6edfe5a33343cedac5b06b6b3b0c876de4c60a166e5f75909fcefd2fcdfe6"
+  },
+  {
+    "path": "scripts/prepare_operations_model.py",
+    "bytes": 4270,
+    "sha256": "db044bee0d457a421c7f9acf38e22d170b8af1c9426e92453de905588b70996f"
+  },
+  {
+    "path": "scripts/prepare_powerbi.py",
+    "bytes": 23922,
+    "sha256": "170615a6d1d2b7d8d2327a79a505ff42ef8a217b11b67d293a45e1a6ca615a78"
+  },
+  {
+    "path": "scripts/reconcile_orders.py",
+    "bytes": 1112,
+    "sha256": "81cf592fb93f26f18d5d4cff04c5586f3ab3960069c20377050600e9a31ae25d"
+  },
+  {
+    "path": "scripts/render_previews.py",
+    "bytes": 15062,
+    "sha256": "c6505c3da09acd39918e2ca34a133d1a71a7afcb1b43fd7bffa94cf1fa14316d"
+  },
+  {
+    "path": "scripts/run_all.py",
+    "bytes": 815,
+    "sha256": "8c27edf5d15c23ed3c0be07e1b0d23d7711a3765e9d1aae9d0e40af5df251bed"
+  },
+  {
+    "path": "scripts/run_analysis.py",
+    "bytes": 1034,
+    "sha256": "794f796834871a230655b2b7ff00afeea2d1d20063d9b4420e06898ec552939a"
+  },
+  {
+    "path": "scripts/validate_data.py",
+    "bytes": 10573,
+    "sha256": "42fae018535b6c2e03852988ffb0fd0f710483159ef2c12b904f0739cf962d4e"
+  },
+  {
+    "path": "sql/business_analysis.sql",
+    "bytes": 5218,
+    "sha256": "f686bb5051feef65379397d7dd3e9912c18524edaeadb11bbdbbbe3ab472b9d0"
+  },
+  {
+    "path": "sql/schema.sql",
+    "bytes": 9137,
+    "sha256": "092b776e88c9c23bf55ed2886ebd708e0179966fdfbefdf5d07b1a728af478d1"
+  },
+  {
+    "path": "sql/validation_queries.sql",
+    "bytes": 1130,
+    "sha256": "9d1d1dfe80a7b78563388f496a7387c6f70497eff8da140f5888425cdfef4c66"
+  },
+  {
+    "path": "tests/test_controls.py",
+    "bytes": 3117,
+    "sha256": "c362a4eb03d5086958ea3796dbc90dfe3cf62421cba7e52abefe2aa69d7d5467"
+  },
+  {
+    "path": "visuals/previews/01_financial_preview.png",
+    "bytes": 211421,
+    "sha256": "679957e57f842e33078dc722d07fdc2ebeac493856ac3be334183057a524eae1"
+  },
+  {
+    "path": "visuals/previews/02_inventory_preview.png",
+    "bytes": 234296,
+    "sha256": "964c008c27c3f94d757dbc45cf8c38c2f0d895873f05dd435f30123c83153f43"
+  },
+  {
+    "path": "visuals/previews/03_systems_preview.png",
+    "bytes": 209967,
+    "sha256": "aafb1425c202691dae798680b7812182b618467a168dc65179e6daea4edc0990"
+  },
+  {
+    "path": "visuals/previews/index.html",
+    "bytes": 1185,
+    "sha256": "c6ca9e560609ae6eb6ef02d4f847dc62a97a0bd923f101ccc55456bc7056aeff"
+  },
+  {
+    "path": "visuals/screenshots/01_financial_native.jpg",
+    "bytes": 117989,
+    "sha256": "5c2d35dedbef5d3e9f171e124c4e14184cb9472ac4e74c30f2488e4cc7192093"
+  },
+  {
+    "path": "visuals/screenshots/02_inventory_native.jpg",
+    "bytes": 137865,
+    "sha256": "d92a5e55629caf334705f371285371ac197ebffce380dd631d5e7cb6c5705dd7"
+  },
+  {
+    "path": "visuals/screenshots/03_systems_native.jpg",
+    "bytes": 122293,
+    "sha256": "aa9f6848d9c28f7dbf5f55498fcfe360d5a63346852def6d904d2cb92d4e8c18"
+  },
+  {
+    "path": "visuals/screenshots/browser_walkthrough_local.jpg",
+    "bytes": 68239,
+    "sha256": "e98bdcf848cf65f65b6257f8f723a73a4fa545d2066308ec4d01488709d38164"
+  },
+  {
+    "path": "visuals/screenshots/dax_validation.png",
+    "bytes": 51042,
+    "sha256": "7ceee2e486dbe173aa18fbe63b798047e5bd3957d029d3fadc2ace621fa15d71"
+  },
+  {
+    "path": "visuals/screenshots/finance_q3_filter_test.jpg",
+    "bytes": 129504,
+    "sha256": "641866612d6c2fac716c462fafe443926f1cbb4e934c81681bc6909756d62146"
+  },
+  {
+    "path": "visuals/screenshots/operations_dax_validation.jpg",
+    "bytes": 51842,
+    "sha256": "732f74d24e3671f93c08ca426e22cdf5d1802c7e16da767f881053d99fa356c1"
+  },
+  {
+    "path": "visuals/screenshots/publish_to_web_disabled.jpg",
+    "bytes": 35783,
+    "sha256": "2cf034b9d69f7667ca2ee682e460629b594593f9940616e8f0f058f58c7de97f"
+  }
+]

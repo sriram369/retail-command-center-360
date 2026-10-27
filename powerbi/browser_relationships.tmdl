@@ -1,0 +1,37 @@
+createOrReplace
+
+	relationship Retail360_1
+		fromColumn: ReportFinance.MonthStart
+		toColumn: DimDate7.Date
+
+	relationship Retail360_2
+		fromColumn: ReportCategory.MonthStart
+		toColumn: DimDate7.Date
+
+	relationship Retail360_3
+		fromColumn: ReportSystems.MonthStart
+		toColumn: DimDate7.Date
+
+	relationship Retail360_4
+		fromColumn: ReportFinance.ChannelId
+		toColumn: DimChannel8.ChannelId
+
+	relationship Retail360_5
+		fromColumn: ReportFinance.LocationId
+		toColumn: DimLocation9.LocationId
+
+	relationship Retail360_6
+		fromColumn: ReportInventory.LocationId
+		toColumn: DimLocation9.LocationId
+
+	relationship Retail360_7
+		fromColumn: ReportInventory.ProductId
+		toColumn: DimProduct10.ProductId
+
+	relationship Retail360_8
+		fromColumn: ReportPurchasing5.ProductId
+		toColumn: DimProduct10.ProductId
+
+	relationship Retail360_9
+		fromColumn: ReportReconciliation6.LocationId
+		toColumn: DimLocation9.LocationId

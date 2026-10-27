@@ -1,0 +1,5 @@
+Category,Severity,Tickets,OpenTickets,SLACompliance,MTTRHours
+Missing webhook,High,11,1,0.18181818181818182,58.1
+Missing webhook,Medium,69,0,0.7971014492753623,49.73913043478261
+Processing delay,Medium,99,0,0.6666666666666666,53.72727272727273
+SKU mapping,High,80,4,0.1125,80.35526315789474

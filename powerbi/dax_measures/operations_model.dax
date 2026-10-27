@@ -1,0 +1,98 @@
+Eligible Orders =
+SUM(ReportFulfillment1[EligibleOrders])
+
+Fulfilled Orders =
+SUM(ReportFulfillment1[FulfilledOrders])
+
+Fulfillment Rate =
+DIVIDE([Fulfilled Orders], [Eligible Orders])
+
+Late Orders =
+SUM(ReportFulfillment1[LateOrders])
+
+Open Late Orders =
+SUM(ReportFulfillment1[OpenLateOrders])
+
+Average Fulfillment Duration =
+DIVIDE(SUM(ReportFulfillment1[FulfillmentDays]), [Fulfilled Orders])
+
+Low Stock SKU Location Count =
+SUM(ReportInventory[LowStock])
+
+SLA Compliance Rate =
+DIVIDE(SUM(ReportTickets4[SLAMet]), SUM(ReportTickets4[SLAEligible]))
+
+Mean Time to Resolution =
+DIVIDE(SUM(ReportTickets4[ResolutionHours]), SUM(ReportTickets4[ResolvedCount]))
+
+Open Support Tickets =
+SUM(ReportTickets4[OpenCount])
+
+Repeat Incidents =
+SUM(ReportTickets4[RepeatIncident])
+
+Ticket Count =
+COUNTROWS(ReportTickets4)
+
+High-Priority Exceptions =
+CALCULATE(COUNTROWS(ReportReconciliation6), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation", ReportReconciliation6[Cohort] = 1)
+
+Average Inventory Value 90D =
+VAR EndDate = MAX(DimDate7[Date])
+VAR DataStartDate = CALCULATE(MIN(DimDate7[Date]), REMOVEFILTERS(DimDate7))
+RETURN IF(EndDate - 89 >= DataStartDate && NOT ISFILTERED(DimProduct10) && NOT ISFILTERED(DimLocation9) && NOT ISFILTERED(DimChannel8), CALCULATE(AVERAGE(ReportDailyInventory3[InventoryValue]), REMOVEFILTERS(DimDate7), DATESBETWEEN(DimDate7[Date], EndDate - 89, EndDate)))
+
+COGS 90D =
+VAR EndDate = MAX(DimDate7[Date])
+RETURN CALCULATE(SUM(ReportDailyFinance2[COGS]), REMOVEFILTERS(DimDate7), DATESBETWEEN(DimDate7[Date], EndDate - 89, EndDate))
+
+Inventory Turnover 90D Annualized =
+DIVIDE([COGS 90D], [Average Inventory Value 90D]) * 365 / 90
+
+Days of Inventory on Hand =
+DIVIDE([Average Inventory Value 90D], [COGS 90D]) * 90
+
+Product Net Sales =
+SUM(ReportProduct5[NetSales])
+
+Product Gross Profit =
+SUM(ReportProduct5[GrossProfit])
+
+Product Gross Margin % =
+DIVIDE([Product Gross Profit], [Product Net Sales])
+
+Net Sales =
+SUM(ReportFinance[NetSales])
+
+COGS =
+SUM(ReportFinance[COGS])
+
+Gross Profit =
+[Net Sales] - [COGS]
+
+Sales Budget =
+SUM(ReportFinance[SalesBudget])
+
+Budget Variance =
+[Net Sales] - [Sales Budget]
+
+Previous Period Sales =
+CALCULATE([Net Sales], DATEADD(DimDate7[Date], -1, MONTH))
+
+Average Order Value =
+DIVIDE([Net Sales], SUM(ReportFinance[FulfilledOrders]))
+
+Current Inventory Value =
+SUM(ReportInventory[InventoryValue])
+
+Net Sales Q3 2026 =
+CALCULATE([Net Sales], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2026,7,1), ReportFinance[MonthStart] <= DATE(2026,9,1))
+
+Gross Profit Q3 2026 =
+CALCULATE([Gross Profit], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2026,7,1), ReportFinance[MonthStart] <= DATE(2026,9,1))
+
+Net Sales Q3 2025 =
+CALCULATE([Net Sales], REMOVEFILTERS(DimDate7), ReportFinance[MonthStart] >= DATE(2025,7,1), ReportFinance[MonthStart] <= DATE(2025,9,1))
+
+Order Value Awaiting Reconciliation =
+CALCULATE(SUM(ReportReconciliation6[OrderedAmount]), ReportReconciliation6[SyncStatus] = "Awaiting reconciliation")

@@ -1,0 +1,21 @@
+{
+  "mode": "Deterministic demonstration; no AI API called",
+  "qualitative_summary": "Comparable-quarter sales increased while gross margin declined. Resolve missing ERP orders and review stock allocation.",
+  "claims": [
+    "q3_sales_growth",
+    "q3_margin_change_pp",
+    "unreconciled_orders",
+    "stockout_risk_sku_locations"
+  ],
+  "recommendations": [
+    "Assign order reconciliation ownership.",
+    "Review discounts alongside product cost changes.",
+    "Validate warehouse stock before replenishment transfers."
+  ],
+  "verified_claim_values": {
+    "q3_sales_growth": 0.09919825337238719,
+    "q3_margin_change_pp": -2.7507638998921613,
+    "unreconciled_orders": 28,
+    "stockout_risk_sku_locations": 6
+  }
+}

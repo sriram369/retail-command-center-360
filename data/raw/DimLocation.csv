@@ -1,0 +1,9 @@
+LocationId,LocationName,LocationType,State
+1,Aster New York,Store,NY
+2,Aster Boston,Store,MA
+3,Aster Chicago,Store,IL
+4,Aster Austin,Store,TX
+5,Aster Miami,Store,FL
+6,Aster Los Angeles,Store,CA
+7,Aster Seattle,Store,WA
+8,Columbus Distribution,Warehouse,OH

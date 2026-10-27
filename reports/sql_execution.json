@@ -1,0 +1,184 @@
+[
+  {
+    "query": 1,
+    "rows": 18,
+    "columns": [
+      "Month",
+      "NetSales",
+      "COGS",
+      "GrossProfit",
+      "GrossMargin"
+    ],
+    "passed": true
+  },
+  {
+    "query": 2,
+    "rows": 162,
+    "columns": [
+      "MonthStart",
+      "ChannelId",
+      "LocationId",
+      "SalesBudget",
+      "NetSales",
+      "Variance"
+    ],
+    "passed": true
+  },
+  {
+    "query": 3,
+    "rows": 28,
+    "columns": [
+      "OrderId",
+      "OrderNumber",
+      "OrderDate",
+      "IntegrationIssue",
+      "OrderValue"
+    ],
+    "passed": true
+  },
+  {
+    "query": 4,
+    "rows": 1841,
+    "columns": [
+      "OrderId",
+      "OrderDate",
+      "OrderStatus",
+      "LocationId",
+      "FailedEvents",
+      "Tickets",
+      "OrderedUnits",
+      "OrderedAmount"
+    ],
+    "passed": true
+  },
+  {
+    "query": 5,
+    "rows": 1,
+    "columns": [
+      "SLACompliance",
+      "MTTRHours"
+    ],
+    "passed": true
+  },
+  {
+    "query": 6,
+    "rows": 6,
+    "columns": [
+      "LocationName",
+      "SKU",
+      "UnitsOnHand",
+      "BackorderUnits",
+      "DailyDemand",
+      "ReorderPoint",
+      "Action",
+      "RecommendedUnits"
+    ],
+    "passed": true
+  },
+  {
+    "query": 7,
+    "rows": 7,
+    "columns": [
+      "LocationName",
+      "NetSales",
+      "GrossMargin",
+      "BudgetVariance"
+    ],
+    "passed": true
+  },
+  {
+    "query": 8,
+    "rows": 200,
+    "columns": [
+      "ProductId",
+      "SKU",
+      "ProductName",
+      "Category",
+      "NetSales",
+      "GrossProfit",
+      "SalesRank",
+      "GrossMargin"
+    ],
+    "passed": true
+  },
+  {
+    "query": 9,
+    "rows": 18,
+    "columns": [
+      "MonthStart",
+      "FulfillmentRate",
+      "AverageDays",
+      "LateOrders"
+    ],
+    "passed": true
+  },
+  {
+    "query": 10,
+    "rows": 8,
+    "columns": [
+      "LocationName",
+      "LateOrders",
+      "OpenLateOrders"
+    ],
+    "passed": true
+  },
+  {
+    "query": 11,
+    "rows": 1,
+    "columns": [
+      "SourceSystem",
+      "FailedEvents",
+      "SuccessfulEvents",
+      "IgnoredDuplicates"
+    ],
+    "passed": true
+  },
+  {
+    "query": 12,
+    "rows": 4,
+    "columns": [
+      "Category",
+      "Severity",
+      "Tickets",
+      "OpenTickets",
+      "SLACompliance",
+      "MTTRHours"
+    ],
+    "passed": true
+  },
+  {
+    "query": 13,
+    "rows": 18,
+    "columns": [
+      "MonthStart",
+      "SLACompliance",
+      "RepeatIncidents"
+    ],
+    "passed": true
+  },
+  {
+    "query": 14,
+    "rows": 2,
+    "columns": [
+      "ExceptionType",
+      "Priority",
+      "AffectedOrders",
+      "OrderedValueExposure",
+      "OldestAgeDays"
+    ],
+    "passed": true
+  },
+  {
+    "query": 15,
+    "rows": 108,
+    "columns": [
+      "MonthStart",
+      "Category",
+      "UnitsSold",
+      "UnitsReturned",
+      "NetSales",
+      "GrossMargin"
+    ],
+    "passed": true
+  }
+]

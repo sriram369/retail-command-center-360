@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": 8,
+  "values": {
+    "eligible_orders": 23495,
+    "fulfilled_orders": 23425,
+    "late_orders": 245,
+    "open_late_orders": 23,
+    "net_sales": 6626438.21,
+    "cogs": 2725435.5507,
+    "open_tickets": 5,
+    "repeat_incidents": 255
+  }
+}

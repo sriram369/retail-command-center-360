@@ -1,0 +1,7 @@
+LocationName,SKU,UnitsOnHand,BackorderUnits,DailyDemand,ReorderPoint,Action,RecommendedUnits
+Columbus Distribution,AST-POU-014,0,37.0,2.357142857142857,43,Expedite backlog,59
+Columbus Distribution,AST-POU-013,0,28.0,1.1428571428571428,29,Expedite backlog,37
+Columbus Distribution,AST-POU-012,13,3.0,1.7857142857142858,40,Expedite backlog,42
+Columbus Distribution,AST-POU-011,4,0.0,1.6428571428571428,37,Review purchase order,44
+Columbus Distribution,AST-HAN-039,14,0.0,0.9285714285714286,21,Review purchase order,13
+Aster Miami,AST-POU-011,2,0.0,0.42857142857142855,3,Transfer from warehouse,4
