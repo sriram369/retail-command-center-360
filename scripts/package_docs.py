@@ -5,7 +5,10 @@ import pandas as pd
 from generate_data import ROOT
 
 def write(rel,text):
-    p=ROOT/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text.strip()+'\n')
+    p=ROOT/rel
+    if rel=='README.md' and p.exists() and '<!-- portfolio-readme:curated -->' in p.read_text():
+        return  # Preserve the maintained portfolio overview during data rebuilds.
+    p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text.strip()+'\n')
 
 def package():
     k=json.loads((ROOT/'reports/kpi_controls.json').read_text());v=json.loads((ROOT/'reports/validation_report.json').read_text())

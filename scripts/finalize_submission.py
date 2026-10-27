@@ -7,6 +7,7 @@ MODEL='https://app.powerbi.com/groups/me/modeling/86841f6f-d70b-4947-badc-f2ccb5
 def write(name,text): (ROOT/name).write_text(text.strip()+'\n')
 def main():
     k=json.loads((ROOT/'reports/kpi_controls.json').read_text())
+    curated_readme='<!-- portfolio-readme:curated -->' in (ROOT/'README.md').read_text()
     write('reports/native_validation.json',json.dumps({
         'captured':'2026-10-27','report_url':REPORT,'native_tables':16,'native_measures':51,'relationships':17,
         'operational_query':{'status':'passed','fulfillment_rate':'0.9970206427','fulfilled_orders':23425,
@@ -56,9 +57,10 @@ Native tables may scroll. A PDF is a snapshot and cannot expose offscreen except
 The Power BI PDF export was initiated; no completed download was retained. The separate portfolio brief assembles explicitly identified native browser captures.
 No PBIX/PBIP is fabricated. The editable report remains in Power BI Service, with reproducible data, TMDL, DAX, M and page instructions supplied locally.
 ''')
-    p=ROOT/'README.md';s=p.read_text()
-    start=s.index('## Reproduce the analytical core');end=s.index('## Recommendations',start)
-    s=s[:start]+'''## Reproduce the analytical core
+    if not curated_readme:
+        p=ROOT/'README.md';s=p.read_text()
+        start=s.index('## Reproduce the analytical core');end=s.index('## Recommendations',start)
+        s=s[:start]+'''## Reproduce the analytical core
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -74,9 +76,9 @@ Cloud reports are updated separately. Rebuilding local files does not refresh th
 Open `data/processed/retail360.sqlite` to explore `sql/business_analysis.sql`; results are retained as `reports/sql_analysis_01.csv` through `15.csv`.
 
 '''+s[end:]
-    marker='\n## Native report and submission files\n'
-    s=s.split(marker)[0]
-    s+=f'''{marker}
+        marker='\n## Native report and submission files\n'
+        s=s.split(marker)[0]
+        s+=f'''{marker}
 [Open the editable Power BI report]({REPORT}). Access requires the owner account or separately granted permissions.
 Three native pages, 51 DAX measures and 17 dimension relationships are implemented. Read [native validation evidence](reports/powerbi_status.md) for tested interactions and remaining extensions.
 
@@ -91,7 +93,7 @@ For a hiring manager, send the brief with a repository/package link and disclose
 Check report access from the recipient's account before relying on a Power BI URL; public access has not been enabled.
 Keep the full raw dataset and SQL available for technical review.
 '''
-    p.write_text(s)
+        p.write_text(s)
     p=ROOT/'docs/resume_bullets.md';s=p.read_text().replace('- Produced Power BI-ready reporting data, DAX and Power Query definitions, requirements, data mappings and a UAT plan to support financial, inventory and systems-health reporting.',
       '- Built and verified a three-page Power BI Service report with 51 DAX measures and 17 dimension relationships; documented requirements, mappings, reconciliation controls and UAT cases across finance, inventory and systems reliability.')
     s=s.replace('Replace the third bullet with an actual Power BI implementation claim only after the native report has been saved and tested.\n','')
@@ -205,7 +207,7 @@ For SKU drillthrough use ProductId, show historical demand and current SKU/locat
 Tooltips should disclose posting dates vs order cohorts, USD units, 90-day inventory basis, cutoff and denominator rules. Risk is also expressed with text/flags; conditional colors can be added using explicit numeric rules.
 ''')
     links_path=ROOT/'reports/publication_links.json'
-    if links_path.exists():
+    if links_path.exists() and not curated_readme:
         links=json.loads(links_path.read_text())
         p=ROOT/'README.md';s=p.read_text().split('\n## Browser portfolio and publication\n')[0]
         s+='\n## Browser portfolio and publication\n\n'
