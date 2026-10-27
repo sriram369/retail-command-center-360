@@ -7,4 +7,6 @@
 - Git author uses GitHub's noreply address for this repository.
 - Raw customer fields are fictional segments/IDs, with no customer contact or authentication data.
 - Native Power BI public publishing is disabled. No public embed URL is claimed.
-- Repository stays private until explicit visibility approval is received.
+- Public repository visibility was explicitly approved by the user on October 27, 2026, and has been enabled.
+
+- Public deployment verified with 11 unauthenticated HTTP checks. The deployed PDF matches the verified local document byte-for-byte.

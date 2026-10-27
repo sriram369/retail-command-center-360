@@ -3,11 +3,16 @@
 Checked October 27, 2026.
 
 - GitHub repository created: https://github.com/sriram369/retail-command-center-360
-- Repository visibility is private while explicit public-visibility approval is pending.
+- Repository visibility is public, explicitly approved by the user on October 27, 2026.
 - A static portfolio and three-page dashboard capture walkthrough are prepared in `docs/index.html` and `docs/demo.html`.
 - Local browser checks passed: images load, all three page tabs work, arrow-key navigation works, one selected panel is visible, and there is no horizontal overflow at the observed 1280px viewport.
 - PDF download is bundled at `docs/assets/Retail360_Portfolio_Brief.pdf`.
-- A GitHub Pages public URL is not claimed until deployment succeeds and an unauthenticated request is verified.
+- GitHub Pages is built and publicly available from main/docs.
+- Eleven anonymous HTTP checks passed, including case study, walkthrough, PDF, all three report captures and release downloads.
+- The public PDF matches the SHA-256 hash of the visually verified local brief.
+- Evidence: reports/public_access_checks.json.
+- Case study URL: https://sriram369.github.io/retail-command-center-360/
+- Walkthrough URL: https://sriram369.github.io/retail-command-center-360/demo.html
 
 ## Power BI public embedding
 

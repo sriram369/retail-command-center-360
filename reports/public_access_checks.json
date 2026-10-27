@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "repository",
+      "url": "https://github.com/sriram369/retail-command-center-360",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 318685,
+      "authentication": "none"
+    },
+    {
+      "name": "case_study",
+      "url": "https://sriram369.github.io/retail-command-center-360/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 5240,
+      "authentication": "none"
+    },
+    {
+      "name": "walkthrough",
+      "url": "https://sriram369.github.io/retail-command-center-360/demo.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 5328,
+      "authentication": "none"
+    },
+    {
+      "name": "stylesheet",
+      "url": "https://sriram369.github.io/retail-command-center-360/site.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 4571,
+      "authentication": "none"
+    },
+    {
+      "name": "script",
+      "url": "https://sriram369.github.io/retail-command-center-360/walkthrough.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 1223,
+      "authentication": "none"
+    },
+    {
+      "name": "pdf",
+      "url": "https://sriram369.github.io/retail-command-center-360/assets/Retail360_Portfolio_Brief.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 461044,
+      "authentication": "none",
+      "matches_verified_local_pdf": true
+    },
+    {
+      "name": "finance_capture",
+      "url": "https://sriram369.github.io/retail-command-center-360/assets/01_financial_native.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 117989,
+      "authentication": "none"
+    },
+    {
+      "name": "inventory_capture",
+      "url": "https://sriram369.github.io/retail-command-center-360/assets/02_inventory_native.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 137865,
+      "authentication": "none"
+    },
+    {
+      "name": "systems_capture",
+      "url": "https://sriram369.github.io/retail-command-center-360/assets/03_systems_native.jpg",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 122293,
+      "authentication": "none"
+    },
+    {
+      "name": "release_pdf",
+      "url": "https://github.com/sriram369/retail-command-center-360/releases/download/v0.1.0.0/Retail360_Portfolio_Brief.pdf",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 0,
+      "authentication": "none"
+    },
+    {
+      "name": "release_zip",
+      "url": "https://github.com/sriram369/retail-command-center-360/releases/download/v0.1.0.0/Retail_Command_Center_360.zip",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 0,
+      "authentication": "none"
+    }
+  ]
+}

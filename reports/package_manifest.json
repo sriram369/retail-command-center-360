@@ -16,8 +16,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 6991,
-    "sha256": "d00f0ed2c52a6ada67c3d1f175607d5afa9f704a9dcd658eba0d9fae1bc979f1"
+    "bytes": 7128,
+    "sha256": "688c1b68243001c6b44d4251e6fdf5e10f239411b65605fdf495ade08c5cbecf"
   },
   {
     "path": "Retail360_Portfolio_Brief.pdf",
@@ -625,19 +625,24 @@
     "sha256": "41c8e3ee02013e2c66c3760d8dd799c28e37fabba873eac367492b63aabf2df4"
   },
   {
+    "path": "reports/public_access_checks.json",
+    "bytes": 2913,
+    "sha256": "b86d253eed53bdb373db6d5db4e19506fdd5cb1cde2f88e8c5cef3b8721a7607"
+  },
+  {
     "path": "reports/publication_links.json",
-    "bytes": 261,
-    "sha256": "fefc9e66e67c25a9cc6278a19845cb23d04a623839fc654d3878d04cd8280d30"
+    "bytes": 538,
+    "sha256": "d370ffd2eed5b29928e40c5c6b0acb456f2f91dfbf2cac350674066d70667b72"
   },
   {
     "path": "reports/publication_status.md",
-    "bytes": 1586,
-    "sha256": "afc7ed7fd254bb7d2313d40e6c9f1e9967a0c5f5f2738330b4658c38b3143a69"
+    "bytes": 1946,
+    "sha256": "09bde018b8758ee74da0133a2ec5de787c601cdfec08c95b98437e8e46825ebb"
   },
   {
     "path": "reports/publish_review.md",
-    "bytes": 1078,
-    "sha256": "abbf215b42da347f7772f3e8e47daba8c5f22e1b0e3265ac14ae9e4a671a0063"
+    "bytes": 1248,
+    "sha256": "67a6a0dd6a1e90277a436b1d62fceff3f6f31a5b41027a177383bd83b6cfc9b0"
   },
   {
     "path": "reports/release_checks.json",
@@ -786,8 +791,8 @@
   },
   {
     "path": "scripts/finalize_submission.py",
-    "bytes": 20010,
-    "sha256": "ba70aa676a41ee0b16774d1b5052034e07881b746ba080d52cfbb250689b3047"
+    "bytes": 21394,
+    "sha256": "9aa398fdc82356d5cd9eb0db7a9d7795b4dd5343e37b607e780680648007b50c"
   },
   {
     "path": "scripts/generate_data.py",
@@ -908,6 +913,11 @@
     "path": "visuals/screenshots/operations_dax_validation.jpg",
     "bytes": 51842,
     "sha256": "732f74d24e3671f93c08ca426e22cdf5d1802c7e16da767f881053d99fa356c1"
+  },
+  {
+    "path": "visuals/screenshots/public_portfolio_live.jpg",
+    "bytes": 56926,
+    "sha256": "0feac51c87613f254c1b31670de951cb7ac37f59a05e609587f435b8ffddc899"
   },
   {
     "path": "visuals/screenshots/publish_to_web_disabled.jpg",

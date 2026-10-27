@@ -1,9 +1,12 @@
 {
   "repository": "https://github.com/sriram369/retail-command-center-360",
-  "visibility": "private",
-  "public_approval": "pending",
-  "site_url": null,
-  "demo_url": null,
+  "visibility": "public",
+  "public_approval": "explicitly approved by user on 2026-10-27",
+  "site_url": "https://sriram369.github.io/retail-command-center-360/",
+  "demo_url": "https://sriram369.github.io/retail-command-center-360/demo.html",
   "powerbi_public_url": null,
-  "native_embedding_status": "disabled in report menu"
+  "native_embedding_status": "disabled in report menu",
+  "pages_status": "built",
+  "anonymous_access": "11 HTTP checks passed without authentication",
+  "verified_date": "2026-10-27"
 }

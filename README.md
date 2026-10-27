@@ -98,13 +98,11 @@ Keep the full raw dataset and SQL available for technical review.
 
 ## Browser portfolio and publication
 
-Repository: [sriram369/retail-command-center-360](https://github.com/sriram369/retail-command-center-360).
-The browser portfolio source is `docs/index.html`; the captured dashboard walkthrough is `docs/demo.html`.
-The repository is private while public-visibility approval is pending. See [publication status](reports/publication_status.md).
-Native Power BI public embedding is disabled in the current report menu. The browser walkthrough shows actual native report captures and is explicitly labeled as a captured demonstration.
+[GitHub repository](https://github.com/sriram369/retail-command-center-360) · Visibility: **public**.
 
-To preview locally:
-```bash
-python -m http.server 8768 --bind 127.0.0.1 --directory docs
-```
-Open `http://127.0.0.1:8768/`. The page tabs work by mouse and keyboard. No external analytics or authentication is used.
+[Public case study](https://sriram369.github.io/retail-command-center-360/) · [Dashboard walkthrough](https://sriram369.github.io/retail-command-center-360/demo.html) · [PDF brief](https://sriram369.github.io/retail-command-center-360/assets/Retail360_Portfolio_Brief.pdf).
+
+GitHub Pages hosts the browser portfolio and actual report captures. The walkthrough is explicitly labeled as captured report content, not a live Power BI embed.
+Native Power BI public embedding is disabled in the current report menu. See [publication status](reports/publication_status.md).
+
+To preview locally, run `python -m http.server 8768 --bind 127.0.0.1 --directory docs` and open `http://127.0.0.1:8768/`. Page tabs support mouse and keyboard; no external analytics or authentication is used.

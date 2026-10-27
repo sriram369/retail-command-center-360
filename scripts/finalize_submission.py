@@ -99,7 +99,7 @@ Keep the full raw dataset and SQL available for technical review.
     p=ROOT/'docs/functional_requirements.md';s=p.read_text().replace('Finance month and channel slicers affect finance tables.',
       'The implemented finance quarter slicer filters applicable monthly finance facts. Channel breakdown is shown as a bar chart; no separate channel slicer is configured.')
     s=s.replace('inventory uses the selected snapshot/as-of date,','the implemented inventory page uses the September 30 cutoff snapshot,')
-    s+='\n## Implemented scope\nThe native report prioritizes executive charts. Additional analyses and drillthrough are specified extensions, not claimed as live functionality. See reports/powerbi_status.md and powerbi/detail_visual_specifications.md.\n'
+    s=s.split('\n## Implemented scope')[0]+'\n## Implemented scope\nThe native report prioritizes executive charts. Additional analyses and drillthrough are specified extensions, not claimed as live functionality. See reports/powerbi_status.md and powerbi/detail_visual_specifications.md.\n'
     p.write_text(s)
     p=ROOT/'docs/uat_test_plan.md';s=p.read_text().replace('| Select month and channel in finance page | Correct totals and chart filtering | Pending native report test |',
       '| Select Q3 2026 in finance | $1,075,281.59 sales; 56.9% margin; 18.4% budget variance | Native PASS; separate channel slicer not configured |')
@@ -204,5 +204,19 @@ For an order drillthrough extension, create a focused detail page with OrderId a
 For SKU drillthrough use ProductId, show historical demand and current SKU/location candidates, then an open purchase-order table. Test destination filters, back navigation and no-data cases before claiming implementation.
 Tooltips should disclose posting dates vs order cohorts, USD units, 90-day inventory basis, cutoff and denominator rules. Risk is also expressed with text/flags; conditional colors can be added using explicit numeric rules.
 ''')
+    links_path=ROOT/'reports/publication_links.json'
+    if links_path.exists():
+        links=json.loads(links_path.read_text())
+        p=ROOT/'README.md';s=p.read_text().split('\n## Browser portfolio and publication\n')[0]
+        s+='\n## Browser portfolio and publication\n\n'
+        s+=f"[GitHub repository]({links['repository']}) · Visibility: **{links['visibility']}**.\n\n"
+        if links.get('site_url'):
+            s+=f"[Public case study]({links['site_url']}) · [Dashboard walkthrough]({links['demo_url']}) · [PDF brief]({links['site_url']}assets/Retail360_Portfolio_Brief.pdf).\n\n"
+            s+='GitHub Pages hosts the browser portfolio and actual report captures. The walkthrough is explicitly labeled as captured report content, not a live Power BI embed.\n'
+        else:
+            s+='The browser portfolio source is `docs/index.html`; the walkthrough source is `docs/demo.html`. Public deployment has not been verified.\n'
+        s+='Native Power BI public embedding is disabled in the current report menu. See [publication status](reports/publication_status.md).\n\n'
+        s+='To preview locally, run `python -m http.server 8768 --bind 127.0.0.1 --directory docs` and open `http://127.0.0.1:8768/`. Page tabs support mouse and keyboard; no external analytics or authentication is used.\n'
+        p.write_text(s)
     print('Dated native evidence and submission documentation updated.')
 if __name__=='__main__':main()
